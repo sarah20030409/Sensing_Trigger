@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-Inter;
+  }
+
+  /* Font style */
+  .SectionTitle {
+    @apply text-Cus_Blue;
+  }
+}
