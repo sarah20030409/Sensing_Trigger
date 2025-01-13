@@ -9,6 +9,18 @@
 
   /* Font style */
   .SectionTitle {
-    @apply text-Cus_Blue;
+    @apply text-Cus_Blue text-32 font-normal;
+  }
+  .HintText {
+    @apply text-xl tracking-[15px];
+  }
+  .HeavyTitle {
+    @apply text-Cus_Blue font-black text-lg;
+  }
+  .LittleText {
+    @apply text-black text-15;
+  }
+  .MediumText {
+    @apply text-black text-base;
   }
 }

@@ -24,6 +24,10 @@ export default {
       fontFamily: {
         Inter: ["Inter"],
       },
+      fontSize: {
+        15: "15px",
+        32: "32px",
+      },
       screens: {
         // sm: "420px",
         // md: "740px",
