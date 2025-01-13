@@ -21,6 +21,37 @@
     @apply text-black text-15;
   }
   .MediumText {
-    @apply text-black text-base;
+    @apply text-black text-base tracking-tight;
+  }
+  .MemberTitle {
+    @apply text-Cus_Orange text-base font-black;
+  }
+  .AdditionalText {
+    @apply text-gray-500 text-sm;
+  }
+}
+
+@layer base {
+  * {
+    @apply duration-300;
+  }
+  ,
+  p,
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  button,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  img {
+    @apply select-none;
   }
 }

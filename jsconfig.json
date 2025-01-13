@@ -1,0 +1,10 @@
+// Use to deirectly import from src folder
+{
+    "compilerOptions": {
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    }
+}
