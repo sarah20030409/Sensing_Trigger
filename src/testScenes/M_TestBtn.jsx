@@ -10,18 +10,18 @@
 //   const [clicked, setClicked] = useState(false);
 //   const btnPosition = [0, 0, 0];
 
-//   // Update every frame of the animation.
-//   // useFrame(() => {
-//   //   if (clicked && circleRef.current) {
-//   //     circleRef.current.position.y -= 0.01;
-//   //     if (circleRef.current.position.y <= 0.1) {
-//   //       setClicked(false);
-//   //       setTimeout(() => {
-//   //         circleRef.current.position.y = 0.25;
-//   //       }, 1500);
-//   //     }
-//   //   }
-//   // });
+// //   Update every frame of the animation.
+//   useFrame(() => {
+//     if (clicked && circleRef.current) {
+//       circleRef.current.position.y -= 0.01;
+//       if (circleRef.current.position.y <= 0.1) {
+//         setClicked(false);
+//         setTimeout(() => {
+//           circleRef.current.position.y = 0.25;
+//         }, 1500);
+//       }
+//     }
+//   });
 
 //   return (
 //     <>
@@ -33,13 +33,13 @@
 
 //       {/* <LogoObjOne scale={btnScale} position={[-3, -1, 0]} /> */}
 //       <M_LogoObjTwo scale={btnScale} position={[0, -1, 0]} />
-//       {/* <CircleUpPart
+//       <CircleUpPart
 //         ref={circleRef}
 //         scale={btnScale}
 //         position={btnPosition}
 //         onClick={() => setClicked(true)}
 //       />
-//       <CircleBasePart scale={btnScale} /> */}
+//       <CircleBasePart scale={btnScale} />
 //     </>
 //   );
 // };

@@ -31,36 +31,52 @@ export function SingleButton({ singleComp }) {
     SquareBTN: M_SquareBTN,
     PentagonBTN: M_PentagonBTN,
   };
+
   let SingleComp = BUTTON_COMPONENTS[singleComp];
   const buttonRef = useRef();
   const [clicked, setClicked] = useState(false);
+  const [isRebounding, setIsRebounding] = useState(false); // Button Rebounding
   const RESET_DELAY = 1500;
   const PRESS_DEPTH = -0.2;
   const initialZ = 0;
   const btnPosition = [0, 0, initialZ];
 
   // Click Test
-  useEffect(() => {
-    console.log(clicked + "," + singleComp);
-    setTimeout(() => {
-      setClicked(false);
-    }, RESET_DELAY);
-  }, [clicked]);
+  // useEffect(() => {
+  //   console.log(clicked + "," + singleComp);
+  //   setTimeout(() => {
+  //     setClicked(false);
+  //   }, RESET_DELAY);
+  // }, [clicked]);
 
   // Button Click animation
+
   useFrame(() => {
-    if (clicked && buttonRef.current) {
+    if (!buttonRef.current) return;
+
+    if (clicked && buttonRef.current.position.z > PRESS_DEPTH) {
       buttonRef.current.position.z -= 0.01;
+
       if (buttonRef.current.position.z <= PRESS_DEPTH) {
         setClicked(false);
         setTimeout(() => {
-          buttonRef.current.position.z = 0;
+          setIsRebounding(true); // Start Rebounding!!
         }, RESET_DELAY);
+      }
+    }
+
+    if (isRebounding && buttonRef.current.position.z < initialZ) {
+      buttonRef.current.position.z += 0.01;
+
+      if (buttonRef.current.position.z >= initialZ) {
+        buttonRef.current.position.z = initialZ;
+        setIsRebounding(false);
       }
     }
   });
 
   return (
+    // ForwardRef problem, can't use onClick, but I don't want Change the content of the 3D model.
     <SingleComp
       ref={buttonRef}
       position={btnPosition}

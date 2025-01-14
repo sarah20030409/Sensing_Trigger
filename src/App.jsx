@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./global/header/Header";
+import CombineTable from "./global/combine_table/CombineTable";
 
 function App() {
   return (
     <>
       <div className="h-svh">
-        <Header />
+        <CombineTable />
       </div>
     </>
   );
