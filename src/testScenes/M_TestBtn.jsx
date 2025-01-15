@@ -52,3 +52,25 @@
 //     </>
 //   );
 // };
+
+// ========================
+// const NAV_ITEMS = {
+//   AboutUs: "/aboutUs",
+//   Product: "/product",
+//   Projects: "/projects",
+//   Sponsors: "/sponsors",
+// }
+// const NAV_ITEMS = [
+//   { path: "/aboutUs", nav: "About Us" },
+//   { path: "/product", nav: "Products" },
+//   { path: "/projects", nav: "Projects" },
+//   { path: "/sponsors", nav: "Sponsors" },
+// ];
+
+//   const NAV_COMPONENT = {
+//     AboutUs: AboutUs,
+//     Product: Product,
+//     Projects: Projects,
+//     Sponsors: Sponsors,
+//   };
+//   const NavPage = NAV_COMPONENT[NAV_PAGE];

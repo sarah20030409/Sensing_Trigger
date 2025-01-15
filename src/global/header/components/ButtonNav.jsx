@@ -1,4 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, {
+  useState,
+  useRef,
+  createContext,
+  useContext,
+  useEffect,
+} from "react";
 import { useFrame } from "@react-three/fiber";
 import { M_AllProduct } from "@/components/models/AllProdu/M_ALLproduct_base_HighColor";
 import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
@@ -6,25 +12,33 @@ import { M_TriangleBTN } from "@/components/models/SingleButton/TriangleBTN_High
 import { M_SquareBTN } from "@/components/models/SingleButton/SquareBTN_HighColor";
 import { M_PentagonBTN } from "@/components/models/SingleButton/PentagonBTN_HighColor";
 import { Canvas } from "@react-three/fiber";
-import { Circle, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
+import { useNavigate } from "react-router-dom";
+import {
+  ButtonProvider,
+  useButtonContext,
+} from "@/global/combine_table/ButtonContext";
 
+// Set Nav to Link path
 export default function ButtonNav() {
   return (
-    <Canvas>
-      <OrbitControls enablePan={false} enableZoom={false} />
-      {/* Product group */}
-      <group position={[0, 0, 0]}>
-        <M_AllProduct />
-        <SingleButton singleComp="CircleBTN" />
-        <SingleButton singleComp="TriangleBTN" />
-        <SingleButton singleComp="SquareBTN" />
-        <SingleButton singleComp="PentagonBTN" />
-      </group>
-    </Canvas>
+    <ButtonProvider>
+      <Canvas>
+        <OrbitControls enablePan={false} enableZoom={false} />
+        {/* Product group */}
+        <group position={[0, 0, 0]}>
+          <M_AllProduct />
+          <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
+          <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />
+          <SingleButton singleComp="SquareBTN" NAV_PATH="/projects" />
+          <SingleButton singleComp="PentagonBTN" NAV_PATH="/sponsors" />
+        </group>
+      </Canvas>
+    </ButtonProvider>
   );
 }
 
-export function SingleButton({ singleComp }) {
+export function SingleButton({ singleComp, NAV_PATH }) {
   const BUTTON_COMPONENTS = {
     CircleBTN: M_CircleBTN,
     TriangleBTN: M_TriangleBTN,
@@ -33,10 +47,13 @@ export function SingleButton({ singleComp }) {
   };
 
   let SingleComp = BUTTON_COMPONENTS[singleComp];
+  const navigate = useNavigate();
   const buttonRef = useRef();
   const [clicked, setClicked] = useState(false);
   const [isRebounding, setIsRebounding] = useState(false); // Button Rebounding
-  const RESET_DELAY = 1500;
+  const { isAnyButtonAnimating, setIsAnyButtonAnimating } = useButtonContext(); // Record the state of the button (isn't clicked).
+
+  const RESET_ANIMATION_DELAY = 1500;
   const PRESS_DEPTH = -0.2;
   const initialZ = 0;
   const btnPosition = [0, 0, initialZ];
@@ -54,14 +71,18 @@ export function SingleButton({ singleComp }) {
   useFrame(() => {
     if (!buttonRef.current) return;
 
-    if (clicked && buttonRef.current.position.z > PRESS_DEPTH) {
+    if (
+      !isRebounding &&
+      clicked &&
+      buttonRef.current.position.z > PRESS_DEPTH
+    ) {
       buttonRef.current.position.z -= 0.01;
 
       if (buttonRef.current.position.z <= PRESS_DEPTH) {
         setClicked(false);
         setTimeout(() => {
           setIsRebounding(true); // Start Rebounding!!
-        }, RESET_DELAY);
+        }, RESET_ANIMATION_DELAY);
       }
     }
 
@@ -71,16 +92,33 @@ export function SingleButton({ singleComp }) {
       if (buttonRef.current.position.z >= initialZ) {
         buttonRef.current.position.z = initialZ;
         setIsRebounding(false);
+        setIsAnyButtonAnimating(false);
       }
     }
   });
+
+  const handleClick = () => {
+    // Prevent Double Click, when button is animating, can't be clicked again.
+    if (isAnyButtonAnimating) return;
+
+    setIsAnyButtonAnimating(true);
+    setClicked(true);
+
+    // When page switch , need wait for the animation to finish ↓Z
+    setTimeout(() => {
+      navigate(NAV_PATH);
+    }, RESET_ANIMATION_DELAY);
+  };
 
   return (
     // ForwardRef problem, can't use onClick, but I don't want Change the content of the 3D model.
     <SingleComp
       ref={buttonRef}
       position={btnPosition}
-      onClick={() => setClicked(true)}
+      onClick={
+        // setClicked(true); ---> Move to the handClick function
+        handleClick
+      }
     />
   );
 }

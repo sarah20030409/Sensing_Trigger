@@ -1,40 +1,21 @@
 import React from "react";
 import bodyDrawer from "@/assets/bodyImg/bodyDrawer.webp";
+import InsideDrawer from "./components/InsideDrawer";
 
-/* RWD_MODE: Desktop | Tablet | Mobile */
+/* RWD_MODE: Desktop(-1250px) | Tablet(1250px-740px)  | Mobile(740px-420px) */
 export default function BodyDrawer({ RWD_MODE }) {
-  if (RWD_MODE === "Tablet") {
-    return (
-      <>
-        <div
-          className="h-svh bg-contain bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${bodyDrawer})` }}
-        >
-          <h1 className="text-3xl ">Tablet</h1>
-        </div>
-      </>
-    );
-  } else if (RWD_MODE === "Mobile") {
-    return (
-      <>
-        <div
-          className="h-svh bg-contain bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${bodyDrawer})` }}
-        >
-          <h1 className="text-3xl ">Mobile</h1>
-        </div>
-      </>
-    );
-  } else if (RWD_MODE === "Desktop") {
-    return (
-      <>
-        <div
-          className="h-svh bg-contain bg-no-repeat bg-center"
-          style={{ backgroundImage: `url(${bodyDrawer})` }}
-        >
-          <h1 className="text-3xl ">Desktop</h1>
-        </div>
-      </>
-    );
-  }
+  return (
+    <div className="h-svh flex justify-center align-top ">
+      <div
+        className="bg-contain bg-no-repeat bg-center w-[100%]"
+        style={{
+          backgroundImage: `url(${bodyDrawer})`,
+          backgroundSize: "80% 95%",
+        }}
+      >
+        {/* <h1 className="text-3xl ">{RWD_MODE}</h1> */}
+        <InsideDrawer NAV_PAGE={"AboutUs"} />
+      </div>
+    </div>
+  );
 }
