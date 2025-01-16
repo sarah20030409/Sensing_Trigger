@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  createContext,
-  useContext,
-  useEffect,
-} from "react";
+import React, { useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { M_AllProduct } from "@/components/models/AllProdu/M_ALLproduct_base_HighColor";
 import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
@@ -58,16 +52,6 @@ export function SingleButton({ singleComp, NAV_PATH }) {
   const initialZ = 0;
   const btnPosition = [0, 0, initialZ];
 
-  // Click Test
-  // useEffect(() => {
-  //   console.log(clicked + "," + singleComp);
-  //   setTimeout(() => {
-  //     setClicked(false);
-  //   }, RESET_DELAY);
-  // }, [clicked]);
-
-  // Button Click animation
-
   useFrame(() => {
     if (!buttonRef.current) return;
 
@@ -103,11 +87,8 @@ export function SingleButton({ singleComp, NAV_PATH }) {
 
     setIsAnyButtonAnimating(true);
     setClicked(true);
-
-    // When page switch , need wait for the animation to finish ↓Z
-    setTimeout(() => {
-      navigate(NAV_PATH);
-    }, RESET_ANIMATION_DELAY);
+    // When page switch , need wait for the animation to finish ↓
+    navigate(NAV_PATH);
   };
 
   return (

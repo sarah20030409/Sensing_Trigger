@@ -74,3 +74,13 @@
 //     Sponsors: Sponsors,
 //   };
 //   const NavPage = NAV_COMPONENT[NAV_PAGE];
+
+// Click Test
+// useEffect(() => {
+//   console.log(clicked + "," + singleComp);
+//   setTimeout(() => {
+//     setClicked(false);
+//   }, RESET_DELAY);
+// }, [clicked]);
+
+// Button Click animation

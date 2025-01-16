@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import AboutUs from "@/pages/aboutUs/AboutUs";
 import Product from "@/pages/aboutProducts/Product";
 import Projects from "@/pages/projects/Projects";
@@ -14,5 +14,5 @@ export default function InsideDrawer({}) {
     { path: "/projects", element: <Projects /> },
     { path: "/sponsors", element: <Sponsors /> },
   ]);
-  return <div className="h-svh flex justify-center items-center">{routes}</div>;
+  return <div className="h-svh FlexToCenter items-center">{routes}</div>;
 }

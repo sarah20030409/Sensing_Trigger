@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 
 export function M_AllProduct(props) {
   const { nodes, materials } = useGLTF(
-    "../models/AllProduct/ALLproduct_base_HighColor.glb"
+    "/models/AllProduct/ALLproduct_base_HighColor.glb"
   );
   return (
     <group {...props} dispose={null}>

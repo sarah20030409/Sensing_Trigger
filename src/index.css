@@ -29,6 +29,11 @@
   .AdditionalText {
     @apply text-gray-500 text-sm;
   }
+
+  /* Layout & Style */
+  .FlexToCenter {
+    @apply flex justify-center;
+  }
 }
 
 @layer base {

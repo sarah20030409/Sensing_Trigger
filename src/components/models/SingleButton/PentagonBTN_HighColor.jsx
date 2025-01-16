@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 
 export const M_PentagonBTN = forwardRef((props, ref) => {
   const { nodes, materials } = useGLTF(
-    "../models/SingleButton/pentagonBTN_HighColor.glb"
+    "/models/SingleButton/pentagonBTN_HighColor.glb"
   );
   return (
     <group ref={ref} {...props} dispose={null}>

@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei";
 
 export const M_SquareBTN = forwardRef((props, ref) => {
   const { nodes, materials } = useGLTF(
-    "../models/SingleButton/squareBTN_HighColor.glb"
+    "/models/SingleButton/squareBTN_HighColor.glb"
   );
   return (
     <group ref={ref} {...props} dispose={null}>

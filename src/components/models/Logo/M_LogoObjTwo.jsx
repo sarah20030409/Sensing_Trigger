@@ -7,7 +7,7 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function M_LogoObjTwo(props) {
-  const { nodes, materials } = useGLTF("../models/Logo/LOGO_2.glb");
+  const { nodes, materials } = useGLTF("/models/Logo/LOGO_2.glb");
   return (
     <group {...props} dispose={null}>
       <mesh
