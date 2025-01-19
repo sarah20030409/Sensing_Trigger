@@ -29,9 +29,10 @@ export default {
         32: "32px",
       },
       screens: {
-        // sm: "420px",
-        // md: "740px",
-        // lg: "1250px",
+        sm: "420px",
+        md: "730px",
+        m_md: "940px",
+        lg: "1250px",
       },
     },
   },
