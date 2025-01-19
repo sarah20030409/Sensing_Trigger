@@ -14,41 +14,49 @@ import { OrbitControls } from "@react-three/drei";
 
 // Set Nav to Link path
 export default function ButtonNav() {
+  return (
+    <ButtonProvider>
+      <ButtonRotation />
+    </ButtonProvider>
+  );
+}
+
+export function ButtonRotation() {
+  const [isDesktop, setIsDesktop] = useState(true);
+  useEffect(() => {
+    const checkDevice = () => {
+      const isTouchDevice =
+        "ontouchstart" in window || navigator.maxTouchPoints > 0;
+      setIsDesktop(!isTouchDevice);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => {
+      window.removeEventListener("resize", checkDevice); // Clean up the event listener
+    };
+  }, []);
+
   const ORBIT_OPTIONS = {
     enableZoom: false,
     enablePan: false,
-    enableTouchMove: true,
-    autoRotate: true,
-    autoRotateSpeed: 0.1,
-    touches: {
-      ONE: "NONE",
-      TWO: "ROTATE",
-    },
     maxPolarAngle: Math.PI / 2,
     minPolarAngle: Math.PI / 2,
     minAzimuthAngle: -Math.PI / 3,
     maxAzimuthAngle: Math.PI / 3,
   };
   return (
-    <ButtonProvider>
-      <Canvas>
-        <OrbitControls {...ORBIT_OPTIONS} />
-        <ButtonRotation />
-      </Canvas>
-    </ButtonProvider>
-  );
-}
-
-export function ButtonRotation() {
-  return (
-    <group>
-      {/* Product group */}
-      <M_AllProduct />
-      <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
-      <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />
-      <SingleButton singleComp="SquareBTN" NAV_PATH="/projects" />
-      <SingleButton singleComp="PentagonBTN" NAV_PATH="/sponsors" />
-    </group>
+    <Canvas>
+      {isDesktop && <OrbitControls {...ORBIT_OPTIONS} />}
+      <group>
+        <M_AllProduct />
+        <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
+        <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />
+        <SingleButton singleComp="SquareBTN" NAV_PATH="/projects" />
+        <SingleButton singleComp="PentagonBTN" NAV_PATH="/sponsors" />
+      </group>
+    </Canvas>
   );
 }
 
