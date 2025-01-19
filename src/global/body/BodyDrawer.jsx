@@ -10,13 +10,13 @@ export default function BodyDrawer() {
   const location = useLocation();
   const CLOSE_TIME = 1500;
   const DRAWER_ANIMATION = {
-    initial: { translateY: "-95%" },
-    animate: { translateY: isOpen ? -50 : "-95%" }, // true : false
+    initial: { translateY: "-97%" },
+    animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
     transition: { duration: 3.2, ease: [0.42, 0, 0.58, 1] },
   };
   const DRAWER_STYLE = {
     backgroundImage: `url(${bodyDrawer})`,
-    backgroundSize: "95% 98%",
+    backgroundSize: "95% 100%",
   };
   useEffect(() => {
     setIsOpen(false);

@@ -1,34 +1,54 @@
-import React, { useState, useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import React, { useState, useRef, useEffect } from "react";
+import { useFrame, Canvas } from "@react-three/fiber";
 import { M_AllProduct } from "@/components/models/AllProdu/M_ALLproduct_base_HighColor";
 import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
 import { M_TriangleBTN } from "@/components/models/SingleButton/TriangleBTN_HighColor";
 import { M_SquareBTN } from "@/components/models/SingleButton/SquareBTN_HighColor";
 import { M_PentagonBTN } from "@/components/models/SingleButton/PentagonBTN_HighColor";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { useNavigate } from "react-router-dom";
 import {
   ButtonProvider,
   useButtonContext,
 } from "@/global/combine_table/ButtonContext";
+import { OrbitControls } from "@react-three/drei";
 
 // Set Nav to Link path
 export default function ButtonNav() {
+  const ORBIT_OPTIONS = {
+    enableZoom: false,
+    enablePan: false,
+    enableTouchMove: true,
+    autoRotate: true,
+    autoRotateSpeed: 0.1,
+    touches: {
+      ONE: "NONE",
+      TWO: "ROTATE",
+    },
+    maxPolarAngle: Math.PI / 2,
+    minPolarAngle: Math.PI / 2,
+    minAzimuthAngle: -Math.PI / 3,
+    maxAzimuthAngle: Math.PI / 3,
+  };
   return (
     <ButtonProvider>
       <Canvas>
-        <OrbitControls enablePan={false} enableZoom={false} />
-        {/* Product group */}
-        <group position={[0, 0, 0]}>
-          <M_AllProduct />
-          <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
-          <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />
-          <SingleButton singleComp="SquareBTN" NAV_PATH="/projects" />
-          <SingleButton singleComp="PentagonBTN" NAV_PATH="/sponsors" />
-        </group>
+        <OrbitControls {...ORBIT_OPTIONS} />
+        <ButtonRotation />
       </Canvas>
     </ButtonProvider>
+  );
+}
+
+export function ButtonRotation() {
+  return (
+    <group>
+      {/* Product group */}
+      <M_AllProduct />
+      <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
+      <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />
+      <SingleButton singleComp="SquareBTN" NAV_PATH="/projects" />
+      <SingleButton singleComp="PentagonBTN" NAV_PATH="/sponsors" />
+    </group>
   );
 }
 
