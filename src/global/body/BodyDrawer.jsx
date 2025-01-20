@@ -15,10 +15,14 @@ const BodyDrawer = forwardRef((props, ref) => {
     animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
     transition: { duration: 1, ease: [0.42, 0, 0.58, 1] },
   };
-  const DRAWER_STYLE = {
-    backgroundImage: `url(${bodyDrawer})`,
-    backgroundSize: "95% 100%",
+  const DRAWER_STYLE = () => {
+    if (location.pathname == "/") return; // If home page , don't show drawer.
+    return {
+      backgroundImage: `url(${bodyDrawer})`,
+      backgroundSize: "95% 100%",
+    };
   };
+
   useEffect(() => {
     setTimeout(() => {
       setIsOpen(false);
@@ -33,7 +37,7 @@ const BodyDrawer = forwardRef((props, ref) => {
       <motion.div className=" FlexToCenter " {...DRAWER_ANIMATION}>
         <div
           className="bg-contain bg-no-repeat bg-center w-[100%]"
-          style={DRAWER_STYLE}
+          style={DRAWER_STYLE()}
         >
           <InsideDrawer />
         </div>

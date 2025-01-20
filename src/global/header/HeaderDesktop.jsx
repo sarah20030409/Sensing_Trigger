@@ -80,9 +80,9 @@ export function ToolGroupLeft() {
         ];
 
         const RWD_imgClassName = [
-          "max-m_md:w-1/3  max-m_md:top-[10%] ",
-          "max-m_md:w-[13%] max-m_md:left-[13%]  max-m_md:top-[50%] max-md:left-[5%] max-md:top-[45%] ",
-          "max-m_md:w-1/4  max-m_md:top-[67%] max-md:top-[65%] max-md:w-[40%]",
+          "max-m_md:w-[30%]  max-m_md:top-[8%] max-md:top-[10%] max-md:w-[30%] max-Spec_RWD01:w-[45%] max-Spec_RWD01:top-[5%]",
+          "max-m_md:w-[13%] max-m_md:left-[13%]  max-m_md:top-[50%] max-md:left-[5%] max-md:top-[45%] max-Spec_RWD01:w-[20%] max-Spec_RWD01:top-[53%] max-Spec_RWD01:left-0",
+          "max-m_md:w-1/4  max-m_md:top-[67%] max-md:top-[65%] max-md:w-[40%] max-Spec_RWD01:top-[70%] max-Spec_RWD01:w-[40%]",
         ];
 
         return (
@@ -104,7 +104,7 @@ export function ToolGroupRight() {
   ];
 
   const RWD_imgClassName = [
-    "max-m_md:w-[18%]  max-m_md:top-[10%] max-md:top-[15%] max-md:w-[22%] max-md:right-0 max-Spec_RWD:w-[30%]",
+    "max-m_md:w-[16%]  max-m_md:top-[10%] max-md:top-[15%] max-md:w-[20%] max-md:right-0 max-Spec_RWD01:w-[30%]",
   ];
 
   return (
@@ -137,7 +137,7 @@ export function InfoDataBar() {
         const InfoImg = [APRimg, MAYimg, MAYimg];
         return (
           <div
-            className="my-10 max-md:scale-[80%] max-md:mb-5 max-md:-mt-5"
+            className="my-10 max-m_md:scale-[77%] max-md:scale-[80%] max-md:mb-5 max-md:-mt-5"
             key={index}
           >
             <h2 className={`${InfoStyle[index]} ${RWD_InfoStyle}`}>

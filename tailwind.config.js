@@ -35,8 +35,10 @@ export default {
         lg: "1920px",
 
         // special RWD size.
-        Spec_RWD: "590px", //Mobile phone board pencil protrudes from the edge of the table
-      }, // Animation
+        Spec_RWD01: "590px", //Mobile phone board pencil protrudes from the edge of the table
+        Spec_RWD02: "490px", //Mobile phone right site adjust.
+      },
+      // Animation
       keyframes: {
         fadeInOut: {
           "0%": {

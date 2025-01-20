@@ -8,7 +8,7 @@ import Sponsors from "@/pages/sponsors/Sponsors";
 //Get Nav from LocalStorage
 export default function InsideDrawer({}) {
   const routes = useRoutes([
-    { path: "/", element: <AboutUs /> },
+    { path: "/", element: <></> },
     { path: "/aboutUs", element: <AboutUs /> },
     { path: "/product", element: <Product /> },
     { path: "/projects", element: <Projects /> },
