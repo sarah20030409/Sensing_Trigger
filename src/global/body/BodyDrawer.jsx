@@ -8,8 +8,8 @@ import { useLocation } from "react-router-dom";
 const BodyDrawer = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
-  const OPEN_TIME = 500;
-  const CLOSE_TIME = 1500 + OPEN_TIME;
+  const OPEN_TIME = 300;
+  const CLOSE_TIME = 1000 + OPEN_TIME;
   const DRAWER_ANIMATION = {
     initial: { translateY: "-97%" },
     animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
