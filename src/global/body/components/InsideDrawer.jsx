@@ -56,7 +56,7 @@ export function LabelSticker() {
   const titles = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
 
   const styleClassName = [
-    "bg-white bg-opacity-80 border border-Cus_Blue rounded-full py-4 px-2 ",
+    "bg-white bg-opacity-80 border border-Cus_Blue rounded-full py-4 px-2",
   ];
   // const RWD_styleClassName = ["max-m_md:w-[7%] max-m_md:scale-90 max-md:w-[11%] max-md:scale-75 max-md:ml-1"];
 
