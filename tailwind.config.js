@@ -29,9 +29,9 @@ export default {
         32: "32px",
       },
       screens: {
-        sm: "420px",
-        md: "790px",
-        m_md: "1190px",
+        sm: "420px", // Use for small mobile. (not necessary)
+        md: "790px", // Use for mobile.
+        m_md: "1190px", // Use for tablet.
         lg: "1920px",
 
         // special RWD size.

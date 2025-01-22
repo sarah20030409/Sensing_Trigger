@@ -132,6 +132,7 @@ export function InfoDataBar() {
           "InfoSmText ml-3",
         ];
         const RWD_InfoStyle = ["max-m_md:ml-0 max-m_md:text-base"];
+        const ImgAlt = ["北科校內展", "新一代設計展", "放視大賞"];
         const InfoStartDate = ["18", "09", "15"];
         const InfoEndDate = ["22", "12", "17"];
         const InfoImg = [APRimg, MAYimg, MAYimg];
@@ -143,7 +144,7 @@ export function InfoDataBar() {
             <h2 className={`${InfoStyle[index]} ${RWD_InfoStyle}`}>
               {InfoTitle[index]}
             </h2>
-            <img className="mt-2 " src={InfoImg[index]} alt="感受觸發" />
+            <img className="mt-2 " src={InfoImg[index]} alt={ImgAlt[index]} />
             <div className="flex justify-center align-middle">
               <p className="DateSmText">{InfoStartDate[index]}</p>
               <div className="h-[2px] w-4 bg-Cus_Orange my-[10%] mx-2"></div>

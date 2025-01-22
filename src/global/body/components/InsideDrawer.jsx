@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-import { useRoutes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useRoutes, useLocation } from "react-router-dom";
 import AboutUs from "@/pages/aboutUs/AboutUs";
 import Product from "@/pages/aboutProducts/Product";
 import Projects from "@/pages/projects/Projects";
 import Sponsors from "@/pages/sponsors/Sponsors";
+import circleLabel from "@/assets/bodyImg/CircleLabel.svg";
+import triangleLabel from "@/assets/bodyImg/TriangleLabel.svg";
+import squareLabel from "@/assets/bodyImg/SquareLabel.svg";
+import pentagonLabel from "@/assets/bodyImg/PentagonLabel.svg";
 
 //Get Nav from LocalStorage
 export default function InsideDrawer({}) {
@@ -14,5 +18,63 @@ export default function InsideDrawer({}) {
     { path: "/projects", element: <Projects /> },
     { path: "/sponsors", element: <Sponsors /> },
   ]);
-  return <div className="h-svh FlexToCenter items-center">{routes}</div>;
+
+  const styleClassName = [
+    "w-full flex justify-between border border-Cus_Orange items-center px-[8%] ",
+    "w-[5%] ",
+    "h-svh w-full border border-green-400 py-[7%] mx-2 pr-[5%]", // <-- (pr-[5%] is to offset the width of the label sticker and keep the left and right sides equal.)
+  ];
+  const RWD_styleClassName = [
+    "max-md:px-[5%]",
+    "max-m_md:w-[7%] max-md:w-[10%]",
+    "max-m_md:py-[12%] max-md:pr-[7%] max-md:py-[15%] max-Spec_RWD01:py-[20%]",
+  ];
+
+  return (
+    <div className={`${styleClassName[0]} ${RWD_styleClassName[0]}`}>
+      <div className={`${styleClassName[1]} ${RWD_styleClassName[1]}`}>
+        <LabelSticker />
+      </div>
+      <div className={`${styleClassName[2]} ${RWD_styleClassName[2]}`}>
+        {routes}
+      </div>
+    </div>
+  );
+}
+
+export function LabelSticker() {
+  const path = useLocation().pathname;
+  if (path === "/") return;
+  const CURRENT_LABEL = {
+    "/aboutUs": 0, //Circle
+    "/product": 1, //Triangle
+    "/projects": 2, //Square
+    "/sponsors": 3, //Pentagon
+  };
+  const currentLabel = CURRENT_LABEL[path];
+  const images = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
+  const titles = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
+
+  const styleClassName = [
+    "bg-white bg-opacity-80 border border-Cus_Blue rounded-full py-4 px-2 ",
+  ];
+  // const RWD_styleClassName = ["max-m_md:w-[7%] max-m_md:scale-90 max-md:w-[11%] max-md:scale-75 max-md:ml-1"];
+
+  return (
+    <div className={`${styleClassName}`}>
+      {titles.map(
+        (title, index) =>
+          currentLabel === index && (
+            <div key={index}>
+              <div className="FlexToCenter">
+                <img className="mb-2" src={images[index]} alt={title} />
+              </div>
+              <div className="FlexToCenter">
+                <h1 className="SectionTitle">{title}</h1>
+              </div>
+            </div>
+          )
+      )}
+    </div>
+  );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 
 export default function AboutUs() {
-  return <div>AboutUs</div>;
+  const styleClassName = ["h-full bg-white"];
+
+  return <div className={`${styleClassName}`}>AboutUs</div>;
 }

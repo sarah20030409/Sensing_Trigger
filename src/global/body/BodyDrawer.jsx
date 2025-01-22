@@ -1,15 +1,15 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import bodyDrawer from "@/assets/bodyImg/bodyDrawer.webp";
 import InsideDrawer from "./components/InsideDrawer";
-import { motion, transform } from "motion/react";
+import { motion } from "motion/react";
 import { useLocation } from "react-router-dom";
 
 /* RWD_MODE: Desktop(-1250px) | Tablet(1250px-740px)  | Mobile(740px-420px) */
 const BodyDrawer = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
-  const OPEN_TIME = 300;
-  const CLOSE_TIME = 1000 + OPEN_TIME;
+  const CLOSE_TIME = 300;
+  const OPEN_TIME = 1000 + CLOSE_TIME;
   const DRAWER_ANIMATION = {
     initial: { translateY: "-97%" },
     animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
@@ -26,10 +26,10 @@ const BodyDrawer = forwardRef((props, ref) => {
   useEffect(() => {
     setTimeout(() => {
       setIsOpen(false);
-    }, OPEN_TIME);
+    }, CLOSE_TIME);
     setTimeout(() => {
       setIsOpen(true);
-    }, CLOSE_TIME);
+    }, OPEN_TIME);
   }, [location.pathname]);
 
   return (

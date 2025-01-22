@@ -9,7 +9,8 @@
 
   /* Font style */
   .SectionTitle {
-    @apply text-Cus_Blue text-32 font-normal;
+    @apply text-Cus_Blue text-2xl font-normal tracking-[5px] text-center pr-1 [writing-mode:vertical-rl] max-md:text-lg;
+    -webkit-text-stroke: 0.4px currentColor;
   }
   .HintText {
     @apply text-xl tracking-[15px] max-md:text-lg max-md:tracking-[8px];
