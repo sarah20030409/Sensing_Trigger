@@ -57,7 +57,7 @@ export default function HeaderDesktop() {
           <InfoDataBar />
         </div>
       </div>
-      <p className="text-center HintText text-Cus_Blue ml-8 -translate-y-14 animate-pulse ">
+      <p className="text-center HintText text-Cus_Blue ml-8 -translate-y-14 animate-pulse max-md:ml-4">
         ↑觸發任一按鈕瀏覽頁面↑
       </p>
       <div className="hidden max-md:block">
