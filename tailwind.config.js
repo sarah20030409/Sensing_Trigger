@@ -32,11 +32,13 @@ export default {
         sm: "420px", // Use for small mobile. (not necessary)
         md: "790px", // Use for mobile.
         m_md: "1190px", // Use for tablet.
-        lg: "1920px",
+        lg: "1720px",
 
         // special RWD size.
         Spec_RWD01: "590px", //Mobile phone board pencil protrudes from the edge of the table
         Spec_RWD02: "490px", //Mobile phone right site adjust.
+        Spec_RWD03: "1024px", //tablet adjust.
+        Spec_RWD04: "1300px",
       },
       // Animation
       keyframes: {
@@ -67,6 +69,16 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-15px)" },
         },
+        bounceWithPause: {
+          "0%, 100%": {
+            transform: "translateY(-10%)",
+            "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
       },
       animation: {
         fadeInOut: "fadeInOut 2s ease-in-out infinite",
@@ -75,6 +87,7 @@ export default {
         smallBounce1: "smallBounce 3s infinite",
         smallBounce2: "smallBounce 2s infinite",
         smallBounce3: "smallBounce 6s infinite",
+        bounceWithPause: "bounceWithPause 0.8s ease-in-out infinite",
       },
     },
   },
