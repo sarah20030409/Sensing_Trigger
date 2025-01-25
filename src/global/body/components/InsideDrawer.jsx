@@ -11,6 +11,10 @@ import pentagonLabel from "@/assets/bodyImg/PentagonLabel.svg";
 
 //Get Nav from LocalStorage
 export default function InsideDrawer({}) {
+  const [crrentRouter, setCrrentRouter] = useState(<></>);
+  const Location = useLocation();
+  const CLOSE_TIME = 500;
+
   const routes = useRoutes([
     { path: "/", element: <></> },
     { path: "/aboutUs", element: <AboutUs /> },
@@ -19,10 +23,16 @@ export default function InsideDrawer({}) {
     { path: "/sponsors", element: <Sponsors /> },
   ]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCrrentRouter(routes);
+    }, CLOSE_TIME);
+  }, [Location.pathname]);
+
   const styleClassName = [
     "w-full flex justify-between border border-Cus_Orange items-center px-[8%] ",
     "w-[5%] ",
-    "h-svh w-full border border-green-400 py-[7%] mx-2 pr-[5%]", // <-- (pr-[5%] is to offset the width of the label sticker and keep the left and right sides equal.)
+    "h-svh w-full border border-green-400 py-[7%] mx-2 pr-[5%] ", // <-- (pr-[5%] is to offset the width of the label sticker and keep the left and right sides equal.)
   ];
   const RWD_styleClassName = [
     "max-md:px-[5%]",
@@ -36,7 +46,7 @@ export default function InsideDrawer({}) {
         <LabelSticker />
       </div>
       <div className={`${styleClassName[2]} ${RWD_styleClassName[2]}`}>
-        {routes}
+        {crrentRouter}
       </div>
     </div>
   );

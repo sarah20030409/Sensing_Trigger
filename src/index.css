@@ -39,6 +39,28 @@
     @apply text-Cus_Blue text-2xl font-black italic text-center;
   }
 
+  /* Product page style */
+  .ProductText {
+    @apply text-2xl translate-x-1 font-semibold text-nowrap;
+  }
+
+  .ProductSmText {
+    @apply text-base translate-x-1 text-nowrap;
+  }
+
+  .ProductText_Orange {
+    @apply ProductText text-Cus_Orange;
+  }
+  .ProductSmText_Orange {
+    @apply ProductSmText text-Cus_Orange;
+  }
+  .ProductText_Blue {
+    @apply ProductText text-Cus_Blue;
+  }
+  .ProductSmText_Blue {
+    @apply ProductSmText text-Cus_Blue;
+  }
+
   /* Layout & Style */
   .FlexToCenter {
     @apply flex justify-center;

@@ -79,6 +79,18 @@ export default {
             "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
           },
         },
+        smallRotate: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(-30deg)" },
+        },
+        Yscale: {
+          "0%, 100%": { transform: "scaleY(1)" },
+          "50%": { transform: "scaleY(0.95)" },
+        },
+        Waving: {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(2deg)" },
+        },
       },
       animation: {
         fadeInOut: "fadeInOut 2s ease-in-out infinite",
@@ -88,6 +100,9 @@ export default {
         smallBounce2: "smallBounce 2s infinite",
         smallBounce3: "smallBounce 6s infinite",
         bounceWithPause: "bounceWithPause 0.8s ease-in-out infinite",
+        smallRotate: "smallRotate 3s ease-in-out infinite",
+        Yscale: "Yscale 3s ease-in-out infinite",
+        Waving: "Waving 0.2s ease-in-out infinite",
       },
     },
   },
