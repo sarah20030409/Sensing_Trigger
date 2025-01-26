@@ -41,7 +41,7 @@
 
   /* Product page style */
   .ProductText {
-    @apply text-2xl translate-x-1 font-semibold text-nowrap;
+    @apply text-2xl translate-x-1 font-semibold text-nowrap max-Spec_RWD02:text-xl;
   }
 
   .ProductSmText {
@@ -68,6 +68,20 @@
 
   .HeaderDeskDisplay {
     @apply h-svh w-full absolute;
+  }
+  /* .ScrollBarStyle {
+    @apply@apply transition-all scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-Cus_Blue hover:scrollbar-thumb-Cus_Blue rounded-full;
+  } */
+  .ScrollBarStyle::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .ScrollBarStyle::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .ScrollBarStyle::-webkit-scrollbar-thumb {
+    @apply bg-Cus_Blue rounded-full hover:bg-Cus_Orange transition-colors duration-500;
   }
 }
 

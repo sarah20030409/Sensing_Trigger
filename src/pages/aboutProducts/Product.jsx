@@ -10,37 +10,85 @@ import TextSvg04 from "@/assets/productImg/TextSvg04.webp";
 
 export default function Product() {
   // const
-  const ImgStyle = ["w-[30%] px-[5%] py-[2%] FlexToCenter items-end"];
+  const Style = [
+    "FlexToCenter ",
+    "w-[30%] px-[5%] py-[2%] FlexToCenter items-end",
+    "absolute -mb-[1%]",
+  ];
+  const RWD_Style = [
+    "max-Spec_RWD01:w-[100%] max-md:justify-around max-Spec_RWD01:block ",
+    "max-Spec_RWD04:w-[30%] max-Spec_RWD03:w-[40%] max-m_md:px-[3%] max-m_md:w-[30%] max-md:w-[40%] max-md:py-[7%] max-Spec_RWD01:block max-Spec_RWD01:py-[10%] max-Spec_RWD01:px-0 max-Spec_RWD01:w-[100%] max-Spec_RWD01:mx-auto",
+    "max-Spec_RWD04:scale-90 max-m_md:scale-[85%] max-md:mx-0 max-md:-mb-[8%] max-md:scale-75 max-Spec_RWD01:scale-[85%]  max-Spec_RWD01:static ",
+  ];
+  const ImgStyle = ["max-Spec_RWD01:w-[60%] max-Spec_RWD01:mx-auto"];
 
   return (
-    <div className="h-full FlexToCenter items-center">
-      <div className="w-full">
-        <div className="FlexToCenter max-Spec_RWD01:block">
-          <div className={ImgStyle}>
-            <img className="animate-smallRotate" src={circleSVG} />
-            <div className="absolute mr-[15%] -mb-[1%]">
-              <InfoLittleCard Type="circle" />
+    <div className="h-full max-Spec_RWD01:h-full max-Spec_RWD01:overflow-y-scroll max-Spec_RWD01:overflow-x-hidden max-Spec_RWD01:ScrollBarStyle">
+      <div className="h-full FlexToCenter items-center">
+        <div className="w-full">
+          <div className={`${Style[0]} ${RWD_Style[0]} `}>
+            <div
+              className={`${Style[1]} ${
+                RWD_Style[1]
+              } ${"max-Spec_RWD01:pt-[240%]"}`}
+            >
+              <a
+                href="https://www.instagram.com/reel/DB75UdDi2wm/"
+                target="_blank"
+              >
+                <img
+                  className={`${ImgStyle} ${"animate-smallRotate "}`}
+                  src={circleSVG}
+                />
+              </a>
+              <div className={`${Style[2]} ${RWD_Style[2]} ${"mr-[15%]"}`}>
+                <InfoLittleCard Type="circle" />
+              </div>
+            </div>
+            <div className={`${Style[1]} ${RWD_Style[1]}`}>
+              <a
+                href="https://www.instagram.com/reel/DC1ilmEznlJ/"
+                target="_blank"
+              >
+                <img
+                  className={`${ImgStyle} ${"animate-bounceWithPause"}`}
+                  src={triangle}
+                />
+              </a>
+              <div className={`${Style[2]} ${RWD_Style[2]} ${"-mr-[15%]"}`}>
+                <InfoLittleCard Type="triangle" />
+              </div>
             </div>
           </div>
-          <div className={ImgStyle}>
-            <img className="animate-bounceWithPause" src={triangle} />
-            <div className="absolute -mr-[15%] -mb-[1%]">
-              <InfoLittleCard Type="triangle" />
-            </div>
-          </div>
-        </div>
 
-        <div className="FlexToCenter max-Spec_RWD01:block">
-          <div className={ImgStyle}>
-            <img className="animate-Yscale" src={square} />
-            <div className="absolute mr-[15%] -mb-[1%]">
-              <InfoLittleCard Type="square" />
+          <div className={`${Style[0]} ${RWD_Style[0]}`}>
+            <div className={`${Style[1]} ${RWD_Style[1]}`}>
+              <a
+                href="https://www.instagram.com/reel/DDHaMB_zb38/"
+                target="_blank"
+              >
+                <img
+                  className={`${ImgStyle} ${"animate-Yscale"}`}
+                  src={square}
+                />
+              </a>
+              <div className={`${Style[2]} ${RWD_Style[2]} ${"mr-[15%]"}`}>
+                <InfoLittleCard Type="square" />
+              </div>
             </div>
-          </div>
-          <div className={ImgStyle}>
-            <img className="animate-Waving" src={pentagon} />
-            <div className="absolute -mr-[15%] -mb-[1%]">
-              <InfoLittleCard Type="pentagon" />
+            <div className={`${Style[1]} ${RWD_Style[1]}`}>
+              <a
+                href="https://www.instagram.com/reel/DCln03cCAv8/"
+                target="_blank"
+              >
+                <img
+                  className={`${ImgStyle} ${"animate-Waving"}`}
+                  src={pentagon}
+                />
+              </a>
+              <div className={`${Style[2]} ${RWD_Style[2]} ${"-mr-[15%]"}`}>
+                <InfoLittleCard Type="pentagon" />
+              </div>
             </div>
           </div>
         </div>
@@ -75,10 +123,10 @@ export function InfoLittleCard({ Type }) {
 
   return (
     <div
-      className={`${borderColors} ${"bg-white bg-opacity-90 border rounded-2xl px-5 py-4 opacity-25 hover:opacity-100"}`}
+      className={`${borderColors} ${"bg-white bg-opacity-90 border rounded-2xl px-5 py-4  hover:opacity-30 max-Spec_RWD01:mx-[5%] max-Spec_RWD01:flex max-Spec_RWD01:justify-center"}`}
     >
       <div>
-        <div className="FlexToCenter items-center mb-2">
+        <div className="FlexToCenter items-center mb-2 max-Spec_RWD01:justify-start ">
           <img src={BtnImgs[currentType]} alt="感受觸發" />
           <h3 className={TextStyles}> {Titles[currentType]}</h3>
         </div>
