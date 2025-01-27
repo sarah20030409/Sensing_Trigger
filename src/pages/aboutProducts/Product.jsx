@@ -123,7 +123,7 @@ export function InfoLittleCard({ Type }) {
 
   return (
     <div
-      className={`${borderColors} ${"bg-white bg-opacity-90 border rounded-2xl px-5 py-4  hover:opacity-30 max-Spec_RWD01:mx-[5%] max-Spec_RWD01:flex max-Spec_RWD01:justify-center"}`}
+      className={`${borderColors} ${"bg-white bg-opacity-70 border rounded-2xl px-5 py-4  hover:opacity-30 max-Spec_RWD01:mx-[5%] max-Spec_RWD01:flex max-Spec_RWD01:justify-center"}`}
     >
       <div>
         <div className="FlexToCenter items-center mb-2 max-Spec_RWD01:justify-start ">

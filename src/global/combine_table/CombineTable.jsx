@@ -34,7 +34,7 @@ export function CombineTableFunc({}) {
         <div className="relative z-50">
           <HeaderDesktop />
         </div>
-        {/* <BlackCanvas /> */}
+        <BlackCanvas />
         <div className="w-full absolute z-1">
           <div className="h-svh px-[5%] py-[10%] max-md:py-[30%] flex justify-between ">
             <div className="flex items-start">

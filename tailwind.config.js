@@ -39,6 +39,7 @@ export default {
         Spec_RWD02: "490px", //Mobile phone right site adjust.
         Spec_RWD03: "1024px", //tablet adjust.
         Spec_RWD04: "1300px",
+        Spec_RWD05: "860px",
       },
       // Animation
       keyframes: {

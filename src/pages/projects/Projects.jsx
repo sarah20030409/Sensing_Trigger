@@ -1,6 +1,5 @@
 import React from "react";
 import projectBG from "@/assets/projectImg/ProjectBgAll.webp";
-import Clip from "@/assets/projectImg/Clip.webp";
 import P01 from "@/assets/projectImg/Posters/P01.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -35,7 +34,7 @@ export function ResponsiveSlider() {
         },
       },
       {
-        breakpoint: 700,
+        breakpoint: 760,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -57,27 +56,32 @@ export function ResponsiveSlider() {
   return (
     <div className="w-[90%] mx-auto">
       <Slider {...settings}>
-        <SingleProject />
-        <SingleProject />
-        <SingleProject />
-        <SingleProject />
+        <SingleProject Img={P01} Group={P01} />
+        <SingleProject Img={P01} Group={P01} />
+        <SingleProject Img={P01} Group={P01} />
+        <SingleProject Img={P01} Group={P01} />
       </Slider>
     </div>
   );
 }
 
-export function SingleProject() {
+export function SingleProject({ Img, Group }) {
   const RWD = [
     "max-Spec_RWD04:scale-90 max-md:scale-100 max-Spec_RWD01:scale-90",
   ];
+
   return (
-    <div className={`${"border border-Cus_Blue mx-2"} ${RWD[0]}`}>
+    <div className={`${" mx-2"} ${RWD[0]}`}>
       <div
-        className="h-[420px] bg-contain bg-center bg-no-repeat flex items-center"
+        className="h-[420px] bg-contain bg-center bg-no-repeat flex items-center hover:animate-Waving"
         style={{ backgroundImage: `url(${projectBG})` }}
       >
-        <div className="w-full border border-Cus_Orange -mb-11">
-          <img className="w-52 mx-auto opacity-60" src={P01} alt="感受觸發" />
+        <div className="w-full -mb-11">
+          <img
+            className="w-52 mx-auto opacity-60 max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] cursor-pointer"
+            src={Img}
+            alt="感受觸發"
+          />
         </div>
       </div>
     </div>
