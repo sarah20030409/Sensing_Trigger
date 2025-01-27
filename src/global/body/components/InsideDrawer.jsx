@@ -32,7 +32,7 @@ export default function InsideDrawer({}) {
   const styleClassName = [
     "w-full flex justify-between border border-Cus_Orange items-center px-[8%] ",
     "w-[5%] ",
-    "h-svh w-full border border-green-400 py-[7%] mx-2 pr-[5%] ", // <-- (pr-[5%] is to offset the width of the label sticker and keep the left and right sides equal.)
+    "h-svh w-full border border-green-400 py-[7%] mx-2 overflow-y-hidden pr-[5%] ", // <-- (pr-[5%] is to offset the width of the label sticker and keep the left and right sides equal.)
   ];
   const RWD_styleClassName = [
     "max-md:px-[5%]",
