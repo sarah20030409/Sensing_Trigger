@@ -40,6 +40,7 @@ export default {
         Spec_RWD03: "1024px", //tablet adjust.
         Spec_RWD04: "1300px",
         Spec_RWD05: "860px",
+        Spec_RWD06: "1400px",
       },
       // Animation
       keyframes: {

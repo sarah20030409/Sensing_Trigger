@@ -5,7 +5,8 @@ import AbImg05 from "@/assets/aboutUsImg/aboutImg05.webp";
 
 export default function AboutUs() {
   return (
-    <div className="h-full">
+    <div className="h-full FlexToCenter items-center">
+      {/* scale-110 rotate-3 overflow-hidden */}
       <InsideBook />
     </div>
   );
@@ -33,16 +34,17 @@ export function InsideBook() {
     };
   }, []);
 
-  const CardStyle = ["w-[30%] animate-bounceWithPause cursor-pointer "];
+  const CardStyle = ["animate-bounceWithPause cursor-pointer "];
 
   // For >= 1024 device.
   if (!isMobile) {
     return (
       <div
-        className="h-[650px] w-fit bg-contain bg-no-repeat border border-Cus_Orange"
+        className="w-[900px] h-[580px] mb-[4%] flex items-end bg-contain bg-no-repeat bg-left-bottom 
+          max-lg:scale-90"
         style={{ backgroundImage: backgroundImage }}
       >
-        <div className=" h-full border border-Cus_Blue">
+        <div className="w-[35%] mb-[5%] ml-[5%]">
           <img className={`${CardStyle}`} src={AbImg03} alt="感受觸發" />
         </div>
       </div>
@@ -51,10 +53,12 @@ export function InsideBook() {
   // For < 1024 device.
   return (
     <div
-      className="h-full bg-contain bg-no-repeat  border border-pink-700"
+      className="w-[450px] h-[700px] scale-[80%] bg-contain bg-no-repeat 
+      max-Spec_RWD02:w-[260px] max-Spec_RWD02:h-[400px] max-Spec_RWD02:scale-100
+      max-Spec_RWD01:w-[290px] max-Spec_RWD01:h-[450px] "
       style={{ backgroundImage: backgroundImage }}
     >
-      <div className="w-[50%] border border-Cus_Blue">
+      <div className="w-[50%] mt-[45%] ml-[5%]">
         <img className={`${CardStyle}`} src={AbImg03} alt="感受觸發" />
       </div>
     </div>
