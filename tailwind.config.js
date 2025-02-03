@@ -93,6 +93,14 @@ export default {
           "0%, 100%": { transform: "rotate(0deg)" },
           "50%": { transform: "rotate(2deg)" },
         },
+        SlideUp: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-150%)" },
+        },
+        SlideDown: {
+          "0%": { transform: "translateY(-150%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         fadeInOut: "fadeInOut 2s ease-in-out infinite",
@@ -105,6 +113,8 @@ export default {
         smallRotate: "smallRotate 3s ease-in-out infinite",
         Yscale: "Yscale 3s ease-in-out infinite",
         Waving: "Waving 0.2s ease-in-out infinite",
+        SlideUp: "SlideUp 0.4s forwards",
+        SlideDown: "SlideDown 0.4s forwards",
       },
     },
   },
