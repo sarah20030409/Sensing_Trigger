@@ -95,10 +95,10 @@ export default {
         },
         SlideUp: {
           "0%": { transform: "translateY(0)" },
-          "100%": { transform: "translateY(-150%)" },
+          "100%": { transform: "translateY(-200%)" },
         },
         SlideDown: {
-          "0%": { transform: "translateY(-150%)" },
+          "0%": { transform: "translateY(-200%)" },
           "100%": { transform: "translateY(0)" },
         },
       },

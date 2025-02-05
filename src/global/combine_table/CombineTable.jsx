@@ -53,7 +53,7 @@ export function CombineTableFunc({}) {
             </div>
           </div>
         </div>
-        <div className="relative z-40">
+        <div className="relative z-40 overflow-hidden">
           <BodyDrawer ref={targetRef} />
         </div>
       </div>

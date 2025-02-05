@@ -10,20 +10,33 @@ import testLogo from "@/assets/sponsorsImg/sponsorTest.webp";
 
 export default function Sponsors() {
   const [openLetter, setOpenLetter] = useState(false);
+  const [timeOpenLetter, setTimeOpenLetter] = useState(false);
   const handleOpen = () => {
     setOpenLetter(true);
   };
 
-  const [showOpenLetter, setShowOpenLetter] = useState(false);
+  const handleClose = () => {
+    setOpenLetter(false);
+  };
 
   useEffect(() => {
-    let timeoutId;
+    let showTimeoutId, hideTimeoutId;
+
     if (openLetter) {
-      timeoutId = setTimeout(() => {
-        setShowOpenLetter(true);
+      showTimeoutId = setTimeout(() => {
+        setTimeOpenLetter(true);
       }, 1000);
     }
-    return () => clearTimeout(timeoutId);
+
+    if (!openLetter) {
+      showTimeoutId = setTimeout(() => {
+        setTimeOpenLetter(false);
+      }, 1000);
+    }
+    return () => {
+      clearTimeout(showTimeoutId);
+      clearTimeout(hideTimeoutId);
+    };
   }, [openLetter]);
 
   return (
@@ -38,13 +51,19 @@ export default function Sponsors() {
           src={tape02}
         />
       </div>
-      <CloseLetter
-        className={`${openLetter ? "hidden" : ""}`}
-        onOpen={handleOpen}
-        isOpen={openLetter}
-      />
-      {showOpenLetter && (
-        <OpenLetter className={`${openLetter ? "" : "hidden"}`} />
+      {!timeOpenLetter && (
+        <CloseLetter
+          className={`${openLetter ? "hidden" : ""}`}
+          onOpen={handleOpen}
+          isOpen={openLetter}
+        />
+      )}
+      {timeOpenLetter && (
+        <OpenLetter
+          className={`${openLetter ? "" : "hidden"}`}
+          onOpen={handleClose}
+          isOpen={openLetter}
+        />
       )}
     </div>
   );
@@ -52,13 +71,19 @@ export default function Sponsors() {
 
 export function CloseLetter({ onOpen, isOpen }) {
   return (
-    <div className={`${"w-full absolute"} ${isOpen ? "animate-SlideUp" : ""}`}>
+    <div
+      className={`${"w-full absolute"} ${
+        isOpen ? "animate-SlideUp" : "animate-SlideDown"
+      }`}
+    >
       <div
-        className="h-[470px] w-full FlexToCenter bg-no-repeat bg-contain bg-center scale-90 rotate-3"
+        className="h-[470px] w-full FlexToCenter bg-no-repeat bg-contain bg-center scale-90 rotate-3
+        max-m_md:scale-75 max-Spec_RWD05:scale-[60%]"
         style={{ backgroundImage: `url(${closeLetter})` }}
       >
         <img
-          className="h-[35%] mt-40 cursor-pointer animate-Waving"
+          className="h-[35%] mt-40 cursor-pointer animate-Waving
+          max-Spec_RWD01:h-[25%] max-Spec_RWD01:mt-44"
           src={sealingWax}
           onClick={onOpen}
         />
@@ -67,13 +92,61 @@ export function CloseLetter({ onOpen, isOpen }) {
   );
 }
 
-export function OpenLetter() {
+export function OpenLetter({ onOpen, isOpen }) {
   return (
-    <div className="w-full absolute animate-SlideDown">
+    <div
+      className={`${"w-full absolute"} ${
+        isOpen ? "animate-SlideDown" : "animate-SlideUp"
+      }`}
+    >
       <div
-        className="h-[470px] w-full FlexToCenter bg-no-repeat bg-contain bg-center scale-90 "
-        style={{ backgroundImage: `url(${closeLetter})` }}
-      ></div>
+        className="h-[580px] w-[540px] FlexToCenter items-end bg-no-repeat bg-contain bg-bottom mx-auto 
+        max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[70%]"
+        style={{ backgroundImage: `url(${openLetter01})` }}
+      >
+        <div className="h-full w-full relative ">
+          <div className="h-full w-full absolute -top-[10%] ">
+            <SponsorPaper />
+          </div>
+          <div className="absolute bottom-0 center w-full">
+            <img className="w-[540px]" src={openLetter02} alt="letter" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="absolute top-[60%] right-[18%] ">
+          <img
+            className="h-[130px] cursor-pointer animate-Waving
+          max-Spec_RWD05:h-[100px]"
+            src={sealingWax}
+            onClick={onOpen}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function SponsorPaper() {
+  const images = Array(20).fill(testLogo);
+
+  return (
+    <div className="h-full">
+      <div
+        className="h-full bg-no-repeat bg-contain bg-bottom "
+        style={{ backgroundImage: `url(${sponsorPaper})` }}
+      >
+        <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              className="h-fit w-[87px] m-[1.2%] cursor-pointer hover:scale-105 
+              max-Spec_RWD05:w-[95px] max-md:w-[100px] max-md:m-[2%]"
+              src={src}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
