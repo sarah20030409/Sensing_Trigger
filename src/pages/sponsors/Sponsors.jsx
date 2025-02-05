@@ -43,11 +43,11 @@ export default function Sponsors() {
     <div className="h-full FlexToCenter items-center">
       <div>
         <img
-          className="absolute h-[15%] top-[15%] left-[15%] opacity-90"
+          className="absolute h-[15%] top-[15%] left-[15%] opacity-90 max-md:h-[10%]"
           src={tape01}
         />
         <img
-          className="absolute h-[12%] right-[18%] bottom-[18%] opacity-90"
+          className="absolute h-[12%] right-[18%] bottom-[18%] opacity-90 max-md:h-[10%]"
           src={tape02}
         />
       </div>
@@ -95,29 +95,32 @@ export function CloseLetter({ onOpen, isOpen }) {
 export function OpenLetter({ onOpen, isOpen }) {
   return (
     <div
-      className={`${"w-full absolute"} ${
+      className={`${" absolute"} ${
         isOpen ? "animate-SlideDown" : "animate-SlideUp"
       }`}
     >
       <div
-        className="h-[580px] w-[540px] FlexToCenter items-end bg-no-repeat bg-contain bg-bottom mx-auto 
-        max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[70%]"
+        className="h-[580px] w-[540px] mb-[5%] FlexToCenter items-end bg-no-repeat bg-contain bg-bottom scale-95 mx-auto 
+        max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[60%] max-Spec_RWD01:-mb-[10%] max-Spec_RWD02:scale-[50%] max-sm:scale-[45%] "
         style={{ backgroundImage: `url(${openLetter01})` }}
       >
         <div className="h-full w-full relative ">
-          <div className="h-full w-full absolute -top-[10%] ">
+          <div
+            className="h-full w-full absolute 
+          max-Spec_RWD05:-top-[5%] max-md:-top-[10%] max-Spec_RWD01:-top-[20%] max-Spec_RWD02:-top-[25%]"
+          >
             <SponsorPaper />
           </div>
-          <div className="absolute bottom-0 center w-full">
+          <div className="absolute bottom-0 center w-full pointer-events-none">
             <img className="w-[540px]" src={openLetter02} alt="letter" />
           </div>
         </div>
       </div>
       <div>
-        <div className="absolute top-[60%] right-[18%] ">
+        <div className="absolute top-[60%] right-[18%] max-Spec_RWD02:right-[25%]">
           <img
             className="h-[130px] cursor-pointer animate-Waving
-          max-Spec_RWD05:h-[100px]"
+          max-Spec_RWD05:h-[100px] max-md:h-[90px] max-Spec_RWD02:h-[80px] "
             src={sealingWax}
             onClick={onOpen}
           />
