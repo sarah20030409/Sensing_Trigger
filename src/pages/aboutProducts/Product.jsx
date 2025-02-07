@@ -106,6 +106,12 @@ export function InfoLittleCard({ Type }) {
   const TextStyles = ["ProductText_" + colors[currentType]];
   const smTextStyles = ["ProductSmText_" + colors[currentType]];
   const BtnImgs = [TextSvg01, TextSvg02, TextSvg03, TextSvg04];
+  const ImgAlt = [
+    "2025北科大互動設計系：展覽的代表物，圓形按鈕，佛性爆發、正面能量。",
+    "2025北科大互動設計系：展覽的代表物，三角形按鈕，勇敢直率、只說真話。",
+    "2025北科大互動設計系：展覽的代表物，方形按鈕，忍氣吞聲、和氣平穩。",
+    "2025北科大互動設計系：展覽的代表物，五角形按鈕，高度敏感，小心謹慎。",
+  ];
 
   const Titles = [
     "佛性爆發、正面能量",
@@ -127,7 +133,7 @@ export function InfoLittleCard({ Type }) {
     >
       <div>
         <div className="FlexToCenter items-center mb-2 max-Spec_RWD01:justify-start ">
-          <img src={BtnImgs[currentType]} alt="感受觸發" />
+          <img src={BtnImgs[currentType]} alt={ImgAlt[currentType]} />
           <h3 className={TextStyles}> {Titles[currentType]}</h3>
         </div>
         <p className={smTextStyles}>{hints[currentType]}</p>

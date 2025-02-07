@@ -64,6 +64,12 @@ export function LabelSticker() {
   const currentLabel = CURRENT_LABEL[path];
   const images = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
   const titles = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
+  const imgAlt = [
+    "2025國立臺北科技大學互動設計系：第一層抽屜，關於我們的展覽資訊。",
+    "2025國立臺北科技大學互動設計系：第二層抽屜，感受觸發按鈕的介紹。",
+    "2025國立臺北科技大學互動設計系：第三層抽屜，各組專題的作品介紹。",
+    "2025國立臺北科技大學互動設計系：第四層抽屜，企業贊助的介紹。",
+  ];
 
   const styleClassName = [
     "bg-white bg-opacity-80 border border-Cus_Blue rounded-full py-4 px-2",
@@ -77,7 +83,7 @@ export function LabelSticker() {
           currentLabel === index && (
             <div key={index}>
               <div className="FlexToCenter">
-                <img className="mb-2" src={images[index]} alt={title} />
+                <img className="mb-2" src={images[index]} alt={imgAlt[index]} />
               </div>
               <div className="FlexToCenter">
                 <h1 className="SectionTitle">{title}</h1>

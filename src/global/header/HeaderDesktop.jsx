@@ -24,9 +24,9 @@ export default function HeaderDesktop() {
           <div className="flex justify-between">
             <a href="https://www.instagram.com/ntut.ixd" target="_blank">
               <img
-                className="w-[29%] cursor-pointer hover:-rotate-[360deg] max-md:w-[20%]"
-                alt="感受觸發"
                 src={Logo01}
+                className="w-[29%] cursor-pointer hover:-rotate-[360deg] max-md:w-[20%]"
+                alt="2025國立臺北科技大學互動設計系：展覽主題的Logo，感受觸發股份有限公司"
               />
             </a>
             <a
@@ -37,6 +37,7 @@ export default function HeaderDesktop() {
               <img
                 className="w-[110%] cursor-pointer hover:-rotate-[360deg] max-md:w-[75%]"
                 src={Logo02}
+                alt="2025國立臺北科技大學互動設計系：展覽主題的Logo，感受觸發股份有限公司"
               />
             </a>
           </div>
@@ -90,7 +91,7 @@ export function ToolGroupLeft() {
             key={index}
             className={`${imgClassName[index]} ${RWD_imgClassName[index]}`}
             src={imgSrc}
-            alt="感受觸發"
+            alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
           />
         );
       })}
@@ -112,6 +113,7 @@ export function ToolGroupRight() {
       <img
         className={`${imgClassName} ${RWD_imgClassName}`}
         src={ToolScrewdriver02}
+        alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
       />
     </div>
   );
@@ -132,7 +134,11 @@ export function InfoDataBar() {
           "InfoSmText ml-3",
         ];
         const RWD_InfoStyle = ["max-m_md:ml-0 max-m_md:text-base"];
-        const ImgAlt = ["北科校內展", "新一代設計展", "放視大賞"];
+        const ImgAlt = [
+          "2025北科大互動設計系校內展：優秀學生作品展示，地點：台北市忠孝東路三段一號藝文中心濟慶館",
+          "2025北科大互動設計系新一代設計展：創新互動科技展，地點：台北市南港展覽館",
+          "2025北科大互動設計系放視大賞：數位互動設計展，地點：高雄展覽館",
+        ];
         const InfoStartDate = ["18", "09", "15"];
         const InfoEndDate = ["22", "12", "17"];
         const InfoImg = [APRimg, MAYimg, MAYimg];

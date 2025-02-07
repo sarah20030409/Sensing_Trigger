@@ -45,7 +45,11 @@ export function InsideBook() {
         style={{ backgroundImage: backgroundImage }}
       >
         <div className="w-[35%] mb-[5%] ml-[5%]">
-          <img className={`${CardStyle}`} src={AbImg03} alt="感受觸發" />
+          <img
+            className={`${CardStyle}`}
+            src={AbImg03}
+            alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
+          />
         </div>
       </div>
     );
@@ -59,7 +63,11 @@ export function InsideBook() {
       style={{ backgroundImage: backgroundImage }}
     >
       <div className="w-[50%] mt-[45%] ml-[5%]">
-        <img className={`${CardStyle}`} src={AbImg03} alt="感受觸發" />
+        <img
+          className={`${CardStyle}`}
+          src={AbImg03}
+          alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
+        />
       </div>
     </div>
   );

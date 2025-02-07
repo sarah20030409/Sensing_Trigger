@@ -56,16 +56,16 @@ export function ResponsiveSlider() {
   return (
     <div className="w-[90%] mx-auto">
       <Slider {...settings}>
-        <SingleProject Img={P01} Group={P01} />
-        <SingleProject Img={P01} Group={P01} />
-        <SingleProject Img={P01} Group={P01} />
-        <SingleProject Img={P01} Group={P01} />
+        <SingleProject Img={P01} Group={P01} Alt={""} />
+        <SingleProject Img={P01} Group={P01} Alt={""} />
+        <SingleProject Img={P01} Group={P01} Alt={""} />
+        <SingleProject Img={P01} Group={P01} Alt={""} />
       </Slider>
     </div>
   );
 }
 
-export function SingleProject({ Img, Group }) {
+export function SingleProject({ Img, Group, Alt }) {
   const RWD = [
     "max-Spec_RWD04:scale-90 max-md:scale-100 max-Spec_RWD01:scale-90",
   ];
@@ -80,7 +80,7 @@ export function SingleProject({ Img, Group }) {
           <img
             className="w-52 mx-auto opacity-60 max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] cursor-pointer"
             src={Img}
-            alt="感受觸發"
+            alt={Alt}
           />
         </div>
       </div>
