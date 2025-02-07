@@ -6,6 +6,8 @@ import { useLocation } from "react-router-dom";
 import HeaderDesktop from "../header/HeaderDesktop";
 import BodyDrawer from "../body/BodyDrawer";
 import BlackCanvas from "../blackCanvas/BlackCanvas";
+import { CustomContextProvider } from "../CustomContext";
+//這裡的ContextProvider用來包裹使用範圍(使用意思:賦值、取值)
 
 /* RWD_MODE: Desktop(-1250px) | Tablet(1250px-740px)  | Mobile(740px-420px) */
 export default function CombineTable() {
@@ -34,28 +36,30 @@ export function CombineTableFunc({}) {
         <div className="relative z-50">
           <HeaderDesktop />
         </div>
-        <BlackCanvas />
-        <div className="w-full absolute z-1">
-          <div className="h-svh px-[5%] py-[10%] max-md:py-[30%] flex justify-between ">
-            <div className="flex items-start">
-              <img
-                className="max-m_md:h-28 max-md:h-20"
-                src={floorSticker01}
-                alt="感受觸發"
-              />
-            </div>
-            <div className="flex items-end">
-              <img
-                className="max-m_md:h-36 max-md:h-20 "
-                src={floorSticker02}
-                alt="感受觸發"
-              />
+        <CustomContextProvider>
+          <BlackCanvas />
+          <div className="w-full absolute z-1">
+            <div className="h-svh px-[5%] py-[10%] max-md:py-[30%] flex justify-between ">
+              <div className="flex items-start">
+                <img
+                  className="max-m_md:h-28 max-md:h-20"
+                  src={floorSticker01}
+                  alt="感受觸發"
+                />
+              </div>
+              <div className="flex items-end">
+                <img
+                  className="max-m_md:h-36 max-md:h-20 "
+                  src={floorSticker02}
+                  alt="感受觸發"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="relative z-40 overflow-hidden">
-          <BodyDrawer ref={targetRef} />
-        </div>
+          <div className="relative z-40 overflow-hidden">
+            <BodyDrawer ref={targetRef} />
+          </div>
+        </CustomContextProvider>
       </div>
     </div>
   );

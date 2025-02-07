@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import closeLetter from "@/assets/sponsorsImg/closeLetter.webp";
 import openLetter01 from "@/assets/sponsorsImg/openLetter01.webp";
 import openLetter02 from "@/assets/sponsorsImg/openLetter02.webp";
@@ -7,6 +7,8 @@ import sponsorPaper from "@/assets/sponsorsImg/sponsorPaper.webp";
 import tape01 from "@/assets/sponsorsImg/sponsorTape01.webp";
 import tape02 from "@/assets/sponsorsImg/sponsorTape02.webp";
 import testLogo from "@/assets/sponsorsImg/sponsorTest.webp";
+import { CustomContext } from "@/global/CustomContext";
+//這裡的Context作用是"賦值"
 
 export default function Sponsors() {
   const [openLetter, setOpenLetter] = useState(false);
@@ -136,7 +138,12 @@ export function OpenLetter({ onOpen, isOpen }) {
 }
 
 export function SponsorPaper() {
-  const images = Array(20).fill(testLogo);
+  const { setCurrentComponent, setSponsorIndex } = useContext(CustomContext);
+  const SPONSOR_LOGO = Array(20).fill(testLogo);
+  const handleClick = (index) => {
+    setCurrentComponent("sponsors");
+    setSponsorIndex(index);
+  };
 
   return (
     <div className="h-full">
@@ -145,13 +152,14 @@ export function SponsorPaper() {
         style={{ backgroundImage: `url(${sponsorPaper})` }}
       >
         <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
-          {images.map((src, index) => (
+          {SPONSOR_LOGO.map((src, index) => (
             <div className="m-[1.2%]">
               <img
                 key={index}
                 className="h-[87px] w-[87px] cursor-pointer hover:scale-105 
                 max-Spec_RWD05:w-[95px] max-Spec_RWD05:h-[95px] max-md:w-[100px] max-md:h-[100px] max-md:m-[2%]"
                 src={src}
+                onClick={() => handleClick(index)}
               />
             </div>
           ))}
