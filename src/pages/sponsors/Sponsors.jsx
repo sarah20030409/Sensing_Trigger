@@ -100,14 +100,14 @@ export function OpenLetter({ onOpen, isOpen }) {
       }`}
     >
       <div
-        className="h-[580px] w-[540px] mb-[5%] FlexToCenter items-end bg-no-repeat bg-contain bg-bottom scale-95 mx-auto 
-        max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[60%] max-Spec_RWD01:-mb-[10%] max-Spec_RWD02:scale-[50%] max-sm:scale-[45%] "
+        className="h-[600px] w-[540px] mb-[5%] FlexToCenter items-end bg-no-repeat bg-contain bg-bottom scale-95 mx-auto 
+        max-m_md:h-[750px] max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[65%] max-Spec_RWD01:-mb-[10%] max-Spec_RWD02:scale-[50%] max-sm:scale-[45%]"
         style={{ backgroundImage: `url(${openLetter01})` }}
       >
         <div className="h-full w-full relative border border-Cus_Orange">
           <div
-            className="h-full w-full absolute 
-          max-Spec_RWD05:-top-[5%] max-md:-top-[10%] max-Spec_RWD01:-top-[20%] max-Spec_RWD02:-top-[25%]"
+            className="h-full w-full absolute px-[3%]
+           max-Spec_RWD05:-top-[5%] max-md:-top-[10%] max-Spec_RWD01:-top-[20%] max-Spec_RWD02:-top-[25%]"
           >
             <SponsorPaper />
           </div>
@@ -136,7 +136,7 @@ export function SponsorPaper() {
   return (
     <div className="h-full">
       <div
-        className="h-full bg-no-repeat bg-contain bg-bottom "
+        className="h-full bg-no-repeat bg-cover bg-bottom border border-Cus_Blue"
         style={{ backgroundImage: `url(${sponsorPaper})` }}
       >
         <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
