@@ -104,7 +104,7 @@ export function OpenLetter({ onOpen, isOpen }) {
         max-m_md:scale-90 max-Spec_RWD05:scale-75 max-Spec_RWD01:scale-[60%] max-Spec_RWD01:-mb-[10%] max-Spec_RWD02:scale-[50%] max-sm:scale-[45%] "
         style={{ backgroundImage: `url(${openLetter01})` }}
       >
-        <div className="h-full w-full relative ">
+        <div className="h-full w-full relative border border-Cus_Orange">
           <div
             className="h-full w-full absolute 
           max-Spec_RWD05:-top-[5%] max-md:-top-[10%] max-Spec_RWD01:-top-[20%] max-Spec_RWD02:-top-[25%]"
@@ -144,8 +144,8 @@ export function SponsorPaper() {
             <div className="m-[1.2%]">
               <img
                 key={index}
-                className="h-fit w-[87px]  cursor-pointer hover:scale-105 
-              max-Spec_RWD05:w-[95px] max-md:w-[100px] max-md:m-[2%]"
+                className="h-[87px] w-[87px] cursor-pointer hover:scale-105 
+                max-Spec_RWD05:w-[95px] max-Spec_RWD05:h-[95px] max-md:w-[100px] max-md:h-[100px] max-md:m-[2%]"
                 src={src}
               />
             </div>
