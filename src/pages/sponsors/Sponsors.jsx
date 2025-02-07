@@ -141,12 +141,14 @@ export function SponsorPaper() {
       >
         <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
           {images.map((src, index) => (
-            <img
-              key={index}
-              className="h-fit w-[87px] m-[1.2%] cursor-pointer hover:scale-105 
+            <div className="m-[1.2%]">
+              <img
+                key={index}
+                className="h-fit w-[87px]  cursor-pointer hover:scale-105 
               max-Spec_RWD05:w-[95px] max-md:w-[100px] max-md:m-[2%]"
-              src={src}
-            />
+                src={src}
+              />
+            </div>
           ))}
         </div>
       </div>
