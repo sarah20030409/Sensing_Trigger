@@ -17,6 +17,7 @@
   }
   .HeavyTitle {
     @apply text-Cus_Blue font-black text-lg;
+    -webkit-text-stroke: 0.5px currentColor;
   }
   .LittleText {
     @apply text-black text-15;

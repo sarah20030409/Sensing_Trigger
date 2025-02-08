@@ -83,15 +83,15 @@ export function SingleProject({ Img, Group, Alt }) {
   return (
     <div className={`${" mx-2"} ${RWD[0]}`}>
       <div
-        className="h-[420px] bg-contain bg-center bg-no-repeat flex items-center hover:animate-Waving"
+        className="h-[420px] bg-contain bg-center bg-no-repeat flex items-center hover:animate-Waving cursor-pointer"
         style={{ backgroundImage: `url(${projectBG})` }}
+        onClick={handleClick}
       >
         <div className="w-full -mb-11">
           <img
-            className="w-52 mx-auto opacity-60 max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] cursor-pointer"
+            className="w-52 mx-auto opacity-60 max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] "
             src={Img}
             alt={Alt}
-            onClick={handleClick}
           />
         </div>
       </div>
