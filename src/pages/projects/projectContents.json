@@ -1,0 +1,14 @@
+{
+    "PROJECT01":{
+        "poster":"https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346599/01_P_yef1gz.webp",
+        "title":"甜點匠心 Ashes",
+        "concept":"「甜點匠心 Ashes」是一款3D第一人稱PC遊戲，玩家將化身為一位甜點工廠的修復專家，肩負起重啟工廠生產線的重責大任，展開充滿神秘和挑戰的工廠修復冒險。",
+        "member_img":["https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_4_py7gon.webp",
+        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_1_yzq6jr.webp",
+        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_3_fphepz.webp" ,
+        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_2_hkso5r.webp"],
+        "member_name":["薛皓瑋","陳冠德","劉娟妤","方乃恆"],
+        "member_job":["程式設計","3D美術設計與技術美術","美術設計","音樂音效與技術美術"],
+        "link":"https://x.com/poorgamer_ixd"
+    }
+}

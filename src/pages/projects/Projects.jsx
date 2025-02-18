@@ -58,10 +58,10 @@ export function ResponsiveSlider() {
   return (
     <div className="w-[90%] mx-auto">
       <Slider {...settings}>
-        <SingleProject Img={P01} Group={1} Alt={""} />
-        <SingleProject Img={P01} Group={2} Alt={""} />
-        <SingleProject Img={P01} Group={3} Alt={""} />
-        <SingleProject Img={P01} Group={4} Alt={""} />
+        <SingleProject Img={P01} Group={"01"} Alt={""} />
+        <SingleProject Img={P01} Group={"02"} Alt={""} />
+        <SingleProject Img={P01} Group={"03"} Alt={""} />
+        <SingleProject Img={P01} Group={"04"} Alt={""} />
       </Slider>
     </div>
   );

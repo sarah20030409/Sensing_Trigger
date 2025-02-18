@@ -2,7 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import conceptCard from "@/assets/aboutUsImg/conceptCard.webp";
 import conceptCardPhone from "@/assets/aboutUsImg/conceptCardPhone.webp";
 import conceptImage from "@/assets/aboutUsImg/conceptImage.webp";
+import maskingTape from "@/assets/projectImg/maskingTape.webp";
 import { CustomContext } from "../CustomContext";
+import projectContents from "@/pages/projects/projectContents.json";
 //這裡的Context作用是"取值"
 
 export default function BlackCanvas() {
@@ -133,15 +135,90 @@ export function AboutInfomation() {
 }
 
 export function ProjectsInfomation({ group }) {
-  const PROJECT_IMAGE = [];
-  const PROJECT_CONCEPT = [];
-  const MEMBER_PHOTOS = [];
-  const MEMBER_NAME = [];
-  const MEMBER_JOBS = [];
+  const CONTENT = projectContents["PROJECT" + group];
+  const [isMobile, setIsMobile] = useState(false);
+  const { poster, title, concept, member_img, member_name, member_job, link } =
+    CONTENT;
+  const projectPaper =
+    "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739858379/projectPaper_rarrsl.webp";
+  const PAPER_DISPLAY = [
+    "h-full flex justify-around items-center px-[10%]",
+    "h-full pt-[3%] pb-[5%] overflow-x-hidden overflow-y-scroll ScrollBarStyle ",
+  ]; // Desktop | Mobile
+  const PAPER_STYLE = [
+    "h-[625px] w-[440px] scale-[120%] bg-contain bg-center bg-no-repeat max-lg:scale-95 max-Spec_RWD06:scale-[85%] max-Spec_RWD04:scale-75 ", //---Desktop
+    "h-[725px] w-[540px] my-[5%] mx-auto bg-contain bg-center bg-no-repeat max-Spec_RWD01:h-[575px] max-Spec_RWD01:w-[390px] max-sm:scale-[82%]", //---Mobile
+  ];
+  // max-Spec_RWD01:scale-90
+  // For >= 1190 device.
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 1190) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    updateBackgroundImage();
+    window.addEventListener("resize", updateBackgroundImage);
+
+    return () => {
+      window.removeEventListener("resize", updateBackgroundImage);
+    };
+  }, []);
 
   return (
-    <div>
-      <h1>ProjectsInfomation{group}</h1>
+    <div className="h-full">
+      <div className={isMobile ? PAPER_DISPLAY[1] : PAPER_DISPLAY[0]}>
+        <div
+          className={`${
+            isMobile ? PAPER_STYLE[1] : PAPER_STYLE[0]
+          } ${"-rotate-2 max-m_md:rotate-0"}`}
+          style={{ backgroundImage: `url(${projectPaper})` }}
+        >
+          <div className="relative h-full FlexToCenter items-center mx-[8%] max-Spec_RWD01:mx-[5%]">
+            <img
+              className="absolute h-[530px] opacity-95 pointer-events-none 
+              max-m_md:h-[600px] max-Spec_RWD01:h-[480px]"
+              src={maskingTape}
+            />
+            <a href={link} target="_black">
+              <img
+                className="max-m_md:h-[550px] max-Spec_RWD01:h-[420px]"
+                src={poster}
+                alt={concept}
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          className={`${
+            isMobile ? PAPER_STYLE[1] : PAPER_STYLE[0]
+          } ${"pt-11 rotate-2 max-m_md:rotate-0"}`}
+          style={{ backgroundImage: `url(${projectPaper})` }}
+        >
+          <div className="px-8 pb-3 max-m_md:px-12 max-Spec_RWD01:px-7">
+            <h2 className="HeavyTitle">{title}</h2>
+            <p className="LittleText2">{concept}</p>
+          </div>
+          <div className="mx-12 FlexToCenter items-center flex-wrap max-Spec_RWD01:mx-3">
+            {member_img.map((image, index) => {
+              return (
+                <div className="w-[50%] my-2" key={index}>
+                  <img
+                    className="w-[67px] mx-auto max-m_md:w-20  max-Spec_RWD01:w-14"
+                    src={image}
+                  />
+                  <p className="MemberTitle text-center py-[0.5px] max-Spec_RWD01:text-sm">
+                    {member_name[index]}
+                  </p>
+                  <p className="LittleText2 text-center">{member_job[index]}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

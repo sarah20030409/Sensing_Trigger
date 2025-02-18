@@ -16,11 +16,14 @@
     @apply text-xl tracking-[15px] max-md:text-lg max-md:tracking-[8px];
   }
   .HeavyTitle {
-    @apply text-Cus_Blue font-black text-lg;
+    @apply text-Cus_Blue font-black text-lg max-Spec_RWD01:text-base;
     -webkit-text-stroke: 0.5px currentColor;
   }
   .LittleText {
     @apply text-black text-15;
+  }
+  .LittleText2 {
+    @apply text-black text-sm tracking-wide max-Spec_RWD01:text-[13px];
   }
   .MediumText {
     @apply text-black text-base tracking-tight;
