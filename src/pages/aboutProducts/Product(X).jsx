@@ -1,9 +1,9 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
-import { M_TriangleBTN } from "@/components/models/SingleButton/TriangleBTN_HighColor";
-import { M_SquareBTN } from "@/components/models/SingleButton/SquareBTN_HighColor";
-import { M_PentagonBTN } from "@/components/models/SingleButton/PentagonBTN_HighColor";
+// import { Canvas } from "@react-three/fiber";
+// import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
+// import { M_TriangleBTN } from "@/components/models/SingleButton/TriangleBTN_HighColor";
+// import { M_SquareBTN } from "@/components/models/SingleButton/SquareBTN_HighColor";
+// import { M_PentagonBTN } from "@/components/models/SingleButton/PentagonBTN_HighColor";
 
 export default function Product() {
   const AllPosi = [0.1, -0.3, 0];
