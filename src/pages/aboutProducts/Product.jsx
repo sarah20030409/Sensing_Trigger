@@ -8,6 +8,15 @@ import React from "react";
 // import TextSvg03 from "@/assets/productImg/TextSvg03.webp";
 // import TextSvg04 from "@/assets/productImg/TextSvg04.webp";
 
+const circleSVG = "/assets/productImg/Circle2D.svg";
+const triangle = "/assets/productImg/Triangle2D.svg";
+const square = "/assets/productImg/Square2D.svg";
+const pentagon = "/assets/productImg/Pentagon2D.svg";
+const TextSvg01 = "/assets/productImg/TextSvg01.webp";
+const TextSvg02 = "/assets/productImg/TextSvg02.webp";
+const TextSvg03 = "/assets/productImg/TextSvg03.webp";
+const TextSvg04 = "/assets/productImg/TextSvg04.webp";
+
 export default function Product() {
   // const
   const Style = [
@@ -38,7 +47,7 @@ export default function Product() {
               >
                 <img
                   className={`${ImgStyle} ${"animate-smallRotate "}`}
-                  src="/assets/productImg/Circle2D.svg"
+                  src={circleSVG}
                 />
               </a>
               <div className={`${Style[2]} ${RWD_Style[2]} ${"mr-[15%]"}`}>
@@ -52,7 +61,7 @@ export default function Product() {
               >
                 <img
                   className={`${ImgStyle} ${"animate-bounceWithPause"}`}
-                  src="/assets/productImg/Triangle2D.svg"
+                  src={triangle}
                 />
               </a>
               <div className={`${Style[2]} ${RWD_Style[2]} ${"-mr-[15%]"}`}>
@@ -69,7 +78,7 @@ export default function Product() {
               >
                 <img
                   className={`${ImgStyle} ${"animate-Yscale"}`}
-                  src="/assets/productImg/Square2D.svg"
+                  src={square}
                 />
               </a>
               <div className={`${Style[2]} ${RWD_Style[2]} ${"mr-[15%]"}`}>
@@ -83,7 +92,7 @@ export default function Product() {
               >
                 <img
                   className={`${ImgStyle} ${"animate-Waving"}`}
-                  src="/assets/productImg/Pentagon2D.svg"
+                  src={pentagon}
                 />
               </a>
               <div className={`${Style[2]} ${RWD_Style[2]} ${"-mr-[15%]"}`}>
@@ -105,12 +114,7 @@ export function InfoLittleCard({ Type }) {
   const borderColors = ["border-Cus_" + colors[currentType]];
   const TextStyles = ["ProductText_" + colors[currentType]];
   const smTextStyles = ["ProductSmText_" + colors[currentType]];
-  const BtnImgs = [
-    "/assets/productImg/TextSvg01.webp",
-    "/assets/productImg/TextSvg02.webp",
-    "/assets/productImg/TextSvg03.webp",
-    "/assets/productImg/TextSvg04.webp",
-  ];
+  const BtnImgs = [TextSvg01, TextSvg02, TextSvg03, TextSvg04];
   const ImgAlt = [
     "2025北科大互動設計系：展覽的代表物，圓形按鈕，佛性爆發、正面能量。",
     "2025北科大互動設計系：展覽的代表物，三角形按鈕，勇敢直率、只說真話。",

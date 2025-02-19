@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import floorImg from "@/assets/bodyImg/floor.webp";
-import floorSticker01 from "@/assets/bodyImg/floorSticker01.webp";
-import floorSticker02 from "@/assets/bodyImg/floorSticker02.webp";
+// import floorImg from "@/assets/bodyImg/floor.webp";
+// import floorSticker01 from "@/assets/bodyImg/floorSticker01.webp";
+// import floorSticker02 from "@/assets/bodyImg/floorSticker02.webp";
 import { useLocation } from "react-router-dom";
 import HeaderDesktop from "../header/HeaderDesktop";
 import BodyDrawer from "../body/BodyDrawer";
 import BlackCanvas from "../blackCanvas/BlackCanvas";
 import { CustomContextProvider } from "../CustomContext";
 //這裡的ContextProvider用來包裹使用範圍(使用意思:賦值、取值)
+
+const floorImg = "/assets/bodyImg/floor.webp";
+const floorSticker01 = "/assets/bodyImg/floorSticker01.webp";
+const floorSticker02 = "/assets/bodyImg/floorSticker02.webp";
 
 /* RWD_MODE: Desktop(-1250px) | Tablet(1250px-740px)  | Mobile(740px-420px) */
 export default function CombineTable() {

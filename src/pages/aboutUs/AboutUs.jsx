@@ -5,6 +5,10 @@ import React, { useState, useEffect, useContext } from "react";
 import { CustomContext } from "@/global/CustomContext";
 //這裡的Context作用是"賦值"
 
+const AbImg01 = "/assets/aboutUsImg/aboutImg01.webp";
+const AbImg03 = "/assets/aboutUsImg/aboutImg03.webp";
+const AbImg05 = "/assets/aboutUsImg/aboutImg05.webp";
+
 export default function AboutUs() {
   return (
     <div className="h-full FlexToCenter items-center">
@@ -26,10 +30,10 @@ export function InsideBook() {
   useEffect(() => {
     const updateBackgroundImage = () => {
       if (window.innerWidth <= 1024) {
-        setBackgroundImage(`url(${"/assets/aboutUsImg/aboutImg05.webp"})`);
+        setBackgroundImage(`url(${AbImg05})`);
         setIsMobile(true);
       } else {
-        setBackgroundImage(`url(${"/assets/aboutUsImg/aboutImg01.webp"})`);
+        setBackgroundImage(`url(${AbImg01})`);
         setIsMobile(false);
       }
     };
@@ -54,7 +58,7 @@ export function InsideBook() {
         <div className="w-[35%] mb-[5%] ml-[5%]">
           <img
             className={`${CardStyle}`}
-            src="/assets/aboutUsImg/aboutImg03.webp"
+            src={AbImg03}
             alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
             onClick={handleClick}
           />
@@ -74,7 +78,7 @@ export function InsideBook() {
       <div className="w-[50%] mt-[45%] ml-[5%]">
         <img
           className={`${CardStyle}`}
-          src="/assets/aboutUsImg/aboutImg03.webp"
+          src={AbImg03}
           alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
           onClick={handleClick}
         />

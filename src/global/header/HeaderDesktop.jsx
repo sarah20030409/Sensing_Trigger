@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import ButtonNav from "./components/ButtonNav";
-import headerTable from "@/assets/headerImg/headerTable.webp";
-import ToolScrewdriver01 from "@/assets/headerImg/ToolScrewdriver01.webp";
-import ToolScrewGroup from "@/assets/headerImg/ToolScrewGroup.webp";
-import ToolGroup01 from "@/assets/headerImg/ToolGroup01.webp";
-import ToolScrewdriver02 from "@/assets/headerImg/ToolScrewdriver02.webp";
-import APRimg from "@/assets/headerImg/APR.webp";
-import MAYimg from "@/assets/headerImg/MAY.webp";
-import Logo01 from "@/assets/LogoFav.svg";
-import Logo02 from "@/assets/SensingTriggerOrange.svg";
+// import headerTable from "@/assets/headerImg/headerTable.webp";
+// import ToolScrewdriver01 from "@/assets/headerImg/ToolScrewdriver01.webp";
+// import ToolScrewGroup from "@/assets/headerImg/ToolScrewGroup.webp";
+// import ToolGroup01 from "@/assets/headerImg/ToolGroup01.webp";
+// import ToolScrewdriver02 from "@/assets/headerImg/ToolScrewdriver02.webp";
+// import APRimg from "@/assets/headerImg/APR.webp";
+// import MAYimg from "@/assets/headerImg/MAY.webp";
+// import Logo01 from "@/assets/LogoFav.svg";
+// import Logo02 from "@/assets/SensingTriggerOrange.svg";
+
+const headerTable = "/assets/headerImg/headerTable.webp";
+const ToolScrewdriver01 = "/assets/headerImg/ToolScrewdriver01.webp";
+const ToolScrewGroup = "/assets/headerImg/ToolScrewGroup.webp";
+const ToolGroup01 = "/assets/headerImg/ToolGroup01.webp";
+const ToolScrewdriver02 = "/assets/headerImg/ToolScrewdriver02.webp";
+const APRimg = "/assets/headerImg/APR.webp";
+const MAYimg = "/assets/headerImg/MAY.webp";
+const Logo01 = "/LogoFav.svg";
+const Logo02 = "/SensingTriggerOrange.svg";
 
 export default function HeaderDesktop() {
   const TABLE_IMG = { backgroundImage: `url(${headerTable})` };

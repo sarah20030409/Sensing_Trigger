@@ -4,10 +4,15 @@ import AboutUs from "@/pages/aboutUs/AboutUs";
 import Product from "@/pages/aboutProducts/Product";
 import Projects from "@/pages/projects/Projects";
 import Sponsors from "@/pages/sponsors/Sponsors";
-import circleLabel from "@/assets/bodyImg/CircleLabel.svg";
-import triangleLabel from "@/assets/bodyImg/TriangleLabel.svg";
-import squareLabel from "@/assets/bodyImg/SquareLabel.svg";
-import pentagonLabel from "@/assets/bodyImg/PentagonLabel.svg";
+// import circleLabel from "@/assets/bodyImg/CircleLabel.svg";
+// import triangleLabel from "@/assets/bodyImg/TriangleLabel.svg";
+// import squareLabel from "@/assets/bodyImg/SquareLabel.svg";
+// import pentagonLabel from "@/assets/bodyImg/PentagonLabel.svg";
+
+const circleLabel = "/assets/bodyImg/CircleLabel.svg";
+const triangleLabel = "/assets/bodyImg/TriangleLabel.svg";
+const squareLabel = "/assets/bodyImg/SquareLabel.svg";
+const pentagonLabel = "/assets/bodyImg/PentagonLabel.svg";
 
 //Get Nav from LocalStorage
 export default function InsideDrawer({}) {

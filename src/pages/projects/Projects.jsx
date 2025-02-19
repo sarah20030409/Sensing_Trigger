@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
-import projectBG from "@/assets/projectImg/ProjectBgAll.webp";
-import P01 from "@/assets/projectImg/Posters/P01.webp";
+// import projectBG from "@/assets/projectImg/ProjectBgAll.webp";
+// import P01 from "@/assets/projectImg/Posters/P01.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { CustomContext } from "@/global/CustomContext";
 //這裡的Context作用是"賦值"
+
+const projectBG = "/assets/projectImg/ProjectBgAll.webp";
+const P01 = "/assets/projectImg/Posters/P01.webp";
 
 export default function Projects() {
   return (

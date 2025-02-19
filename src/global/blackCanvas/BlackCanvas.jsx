@@ -1,11 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
-import conceptCard from "@/assets/aboutUsImg/conceptCard.webp";
-import conceptCardPhone from "@/assets/aboutUsImg/conceptCardPhone.webp";
-import conceptImage from "@/assets/aboutUsImg/conceptImage.webp";
-import maskingTape from "@/assets/projectImg/maskingTape.webp";
+// import conceptCard from "@/assets/aboutUsImg/conceptCard.webp";
+// import conceptCardPhone from "@/assets/aboutUsImg/conceptCardPhone.webp";
+// import conceptImage from "@/assets/aboutUsImg/conceptImage.webp";
+// import maskingTape from "@/assets/projectImg/maskingTape.webp";
 import { CustomContext } from "../CustomContext";
 import projectContents from "@/pages/projects/projectContents.json";
 //這裡的Context作用是"取值"
+
+const conceptCard = "/assets/aboutUsImg/conceptCard.webp";
+const conceptCardPhone = "/assets/aboutUsImg/conceptCardPhone.webp";
+const conceptImage = "/assets/aboutUsImg/conceptImage.webp";
+const maskingTape = "/assets/projectImg/maskingTape.webp";
 
 export default function BlackCanvas() {
   const [canvasState, setCanvasState] = useState(false);

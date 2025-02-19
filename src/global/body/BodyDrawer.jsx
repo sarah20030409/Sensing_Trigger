@@ -1,8 +1,10 @@
 import React, { useState, useEffect, forwardRef } from "react";
-import bodyDrawer from "@/assets/bodyImg/bodyDrawer.webp";
+// import bodyDrawer from "@/assets/bodyImg/bodyDrawer.webp";
 import InsideDrawer from "./components/InsideDrawer";
 import { motion } from "motion/react";
 import { useLocation } from "react-router-dom";
+
+const bodyDrawer = "/assets/bodyImg/bodyDrawer.webp";
 
 /* RWD_MODE: Desktop(-1250px) | Tablet(1250px-740px)  | Mobile(740px-420px) */
 const BodyDrawer = forwardRef((props, ref) => {

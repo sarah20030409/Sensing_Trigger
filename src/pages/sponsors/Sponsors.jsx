@@ -1,14 +1,23 @@
 import React, { useState, useEffect, useContext } from "react";
-import closeLetter from "@/assets/sponsorsImg/closeLetter.webp";
-import openLetter01 from "@/assets/sponsorsImg/openLetter01.webp";
-import openLetter02 from "@/assets/sponsorsImg/openLetter02.webp";
-import sealingWax from "@/assets/sponsorsImg/SealingWax.webp";
-import sponsorPaper from "@/assets/sponsorsImg/sponsorPaper.webp";
-import tape01 from "@/assets/sponsorsImg/sponsorTape01.webp";
-import tape02 from "@/assets/sponsorsImg/sponsorTape02.webp";
-import testLogo from "@/assets/sponsorsImg/sponsorTest.webp";
+// import closeLetter from "@/assets/sponsorsImg/closeLetter.webp";
+// import openLetter01 from "@/assets/sponsorsImg/openLetter01.webp";
+// import openLetter02 from "@/assets/sponsorsImg/openLetter02.webp";
+// import sealingWax from "@/assets/sponsorsImg/SealingWax.webp";
+// import sponsorPaper from "@/assets/sponsorsImg/sponsorPaper.webp";
+// import tape01 from "@/assets/sponsorsImg/sponsorTape01.webp";
+// import tape02 from "@/assets/sponsorsImg/sponsorTape02.webp";
+// import testLogo from "@/assets/sponsorsImg/sponsorTest.webp";
 import { CustomContext } from "@/global/CustomContext";
 //這裡的Context作用是"賦值"
+
+const closeLetter = "/assets/sponsorsImg/closeLetter.webp";
+const openLetter01 = "/assets/sponsorsImg/openLetter01.webp";
+const openLetter02 = "/assets/sponsorsImg/openLetter02.webp";
+const sealingWax = "/assets/sponsorsImg/SealingWax.webp";
+const sponsorPaper = "/assets/sponsorsImg/sponsorPaper.webp";
+const tape01 = "/assets/sponsorsImg/sponsorTape01.webp";
+const tape02 = "/assets/sponsorsImg/sponsorTape02.webp";
+const testLogo = "/assets/sponsorsImg/sponsorTest.webp";
 
 export default function Sponsors() {
   const [openLetter, setOpenLetter] = useState(false);
