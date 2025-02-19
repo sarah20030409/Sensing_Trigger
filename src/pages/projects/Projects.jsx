@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import projectContents from "@/pages/projects/projectContents.json";
 import { CustomContext } from "@/global/CustomContext";
 //這裡的Context作用是"賦值"
 
@@ -61,16 +62,31 @@ export function ResponsiveSlider() {
   return (
     <div className="w-[90%] mx-auto">
       <Slider {...settings}>
-        <SingleProject Img={P01} Group={"01"} Alt={""} />
-        <SingleProject Img={P01} Group={"02"} Alt={""} />
-        <SingleProject Img={P01} Group={"03"} Alt={""} />
-        <SingleProject Img={P01} Group={"04"} Alt={""} />
+        <SingleProject Group={"01"} />
+        <SingleProject Group={"02"} />
+        <SingleProject Group={"03"} />
+        <SingleProject Group={"04"} />
+        <SingleProject Group={"05"} />
+        <SingleProject Group={"06"} />
+        <SingleProject Group={"08"} />
+        <SingleProject Group={"09"} />
+        <SingleProject Group={"10"} />
+        <SingleProject Group={"11"} />
+        <SingleProject Group={"12"} />
+        <SingleProject Group={"13"} />
+        <SingleProject Group={"14"} />
+        <SingleProject Group={"15"} />
+        <SingleProject Group={"17"} />
+        <SingleProject Group={"18"} />
       </Slider>
     </div>
   );
 }
 
-export function SingleProject({ Img, Group, Alt }) {
+export function SingleProject({ Group }) {
+  const CONTENT = projectContents["PROJECT" + Group];
+  const { poster, concept } = CONTENT;
+
   const { setCurrentComponent, setProjectGroupIndex } =
     useContext(CustomContext); //一個set當前組件，一個set組別數
 
@@ -92,9 +108,9 @@ export function SingleProject({ Img, Group, Alt }) {
       >
         <div className="w-full -mb-11">
           <img
-            className="w-52 mx-auto opacity-60 max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] "
-            src={Img}
-            alt={Alt}
+            className="w-52 mx-auto max-Spec_RWD05:w-48 max-Spec_RWD02:w-[185px] max-sm:w-[150px] "
+            src={poster}
+            alt={concept}
           />
         </div>
       </div>

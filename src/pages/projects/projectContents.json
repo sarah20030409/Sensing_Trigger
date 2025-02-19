@@ -1,14 +1,206 @@
 {
     "PROJECT01":{
-        "poster":"https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346599/01_P_yef1gz.webp",
+        "poster":"/posters/01_P.webp",
         "title":"甜點匠心 Ashes",
         "concept":"「甜點匠心 Ashes」是一款3D第一人稱PC遊戲，玩家將化身為一位甜點工廠的修復專家，肩負起重啟工廠生產線的重責大任，展開充滿神秘和挑戰的工廠修復冒險。",
-        "member_img":["https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_4_py7gon.webp",
-        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_1_yzq6jr.webp",
-        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_3_fphepz.webp" ,
-        "https://res.cloudinary.com/dfojrmrfo/image/upload/v1739346338/01_2_hkso5r.webp"],
+        "member_img":["/members/01/01 (1).webp",
+        "/members/01/01 (2).webp",
+        "/members/01/01 (3).webp" ,
+        "/members/01/01 (4).webp"],
         "member_name":["薛皓瑋","陳冠德","劉娟妤","方乃恆"],
         "member_job":["程式設計","3D美術設計與技術美術","美術設計","音樂音效與技術美術"],
         "link":"https://x.com/poorgamer_ixd"
+    },
+
+    "PROJECT02":{
+        "poster":"/posters/02_P.webp",
+        "title":"Fragile Signals",
+        "concept":"以「網路性暴力」為主題的互動式體驗。透過音樂與影像，觀眾將沉浸於受害者的情感漩渦，並以肢體動作影響劇情發展，在虛實交錯中感受數位世界的脆弱與傷害。",
+        "member_img":["/members/02/02 (1).webp",
+        "/members/02/02 (2).webp",
+        "/members/02/02 (3).webp" ],
+        "member_name":["曾莉榛","張愛翎","郭道申"],
+        "member_job":["專案管理 視覺整合","美術設計","音樂製作"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT03":{
+        "poster":"/posters/03_P.webp",
+        "title":"無法忘懷的回憶",
+        "concept":"透過MR/VR技術,讓您以第一人稱視角體驗失智長者的日常生活。在虛擬環境中,了解他們所面臨的困境、探索非藥物治療方式，並學習照護知識。期望藉此提升社會對失智症的認識與關懷。",
+        "member_img":["/members/03/03 (1).webp",
+        "/members/03/03 (2).webp",
+        "/members/03/03 (3).webp",
+        "/members/03/03 (4).webp",
+        "/members/03/03 (5).webp",
+        "/members/03/03 (6).webp"],
+        "member_name":["顏維廷","蘇子貴","周奐銓","葉思佑","郭庭佑","俞卉嬨"],
+        "member_job":["VR互動功能 場景流程製作","MR功能、場景","3D美術場景建模","腳本、2D美術","3D美術材質上色","場景美術、光線渲染"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT04":{
+        "poster":"/posters/04_P.webp",
+        "title":"LIBIDO",
+        "concept":"LIBIDO是一款結合變色機制的2D平台跳躍遊戲，玩家身為一隻變色龍，只能碰到一樣顏色的東西，操控著變色龍向前奔跑、跳躍的同時一邊變色攀爬找到目標！",
+        "member_img":["/members/04/04 (1).webp",
+        "/members/04/04 (2).webp",
+        "/members/04/04 (3).webp",
+        "/members/04/04 (4).webp",
+        "/members/04/04 (5).webp"],
+        "member_name":["林柏郡","呂軒恆","吳芃儀","曹書語","曾得維"],
+        "member_job":["程式","MR功能、場景","遊戲設計","美術","美術","美術,音樂"],
+        "link":"https://www.instagram.com/sleepwalk_games/"
+    },
+
+    "PROJECT05":{
+        "poster":"/assets/projectImg/Posters/P01.webp",
+        "title":"Ｂｅｌｌｙ",
+        "concept":"一場在魚身體裡的奇幻冒險，在這個充滿驚奇的奇異世界中穿梭探索，同時尋找逃出的方式。",
+        "member_img":["/members/05/05 (1).webp",
+        "/members/05/05 (2).webp"],
+        "member_name":["東文玉","楊詩曼"],
+        "member_job":["程式 開場影片 打光3D建模","3D建模 人物動畫"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT06":{
+        "poster":"/assets/projectImg/Posters/P01.webp",
+        "title":"心蓮心",
+        "concept":"「心蓮心」是一款給年長族群的 LINE 官方帳號，提供 AI 生圖、模板和簡潔介面，使用者能輕鬆編輯，生成客製化長輩圖。「長輩圖」創造了年長者與子代的共同語言，達成聯繫情感的目的。",
+        "member_img":["/members/06/06 (1).webp",
+        "/members/06/06 (2).webp",
+        "/members/06/06 (3).webp",
+        "/members/06/06 (4).webp",
+        "/members/06/06 (5).webp"],
+        "member_name":["李彧萱","李亮兒","曾 馨","邱恩瑀","楊舒茵"],
+        "member_job":["PM、UX","程式","UI","美術","UX"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT08":{
+        "poster":"/posters/08_P.webp",
+        "title":"Grania",
+        "concept":"2D橫向單人卷軸遊戲。玩家扮演人類和擬態者，在切換體驗不同玩法的同時也能觀看兩個不同角色的視角。藉此帶出我們的故事理念。",
+        "member_img":["/members/08/08 (1).webp",
+        "/members/08/08 (2).webp",
+        "/members/08/08 (3).webp",
+        "/members/08/08 (4).webp"],
+        "member_name":["方耀緯","施君穎","蔡千玉","隋明慧"],
+        "member_job":["遊戲程式、遊戲機制、技術美術","劇本撰寫、社群主經營、音樂音效、雜工","遊戲美術、人物動畫","主視覺、場景美術"],
+        "link":"https://www.youtube.com/@%E6%A0%BC%E8%98%AD%E5%B0%BC%E4%BA%9E%E5%AE%98%E6%96%B9%E8%B3%AC%E8%99%9F"
+    },
+
+    "PROJECT09":{
+        "poster":"/posters/09_P.webp",
+        "title":"孤獨前哨",
+        "concept":"一款以VR頭戴顯示器結合體感回饋裝置的沈浸式VR遊戲。玩家將扮演人型機甲的駕駛，以肢體動作帶動現實中的硬體裝置，操縱機甲做出相同動作來攻擊與移動，並得到如震動、後座力等多元體感。",
+        "member_img":["/members/09/09 (1).webp",
+        "/members/09/09 (2).webp",
+        "/members/09/09 (3).webp",
+        "/members/09/09 (4).webp"],
+        "member_name":["林馨柔","胡嫚元","楊煜霖","謝佳妧"],
+        "member_job":["硬體裝置","平面美術","3D美術","程式設計"],
+        "link":"https://www.instagram.com/last_sentry/"
+    },
+
+    "PROJECT10":{
+        "poster":"/posters/10_P.webp",
+        "title":"光晝之斯",
+        "concept":"玩家扮演宙斯，因妻子希拉拋棄自己去度假，開始盡顯風流本性，到處利用自己充滿魅力的「牌技」拈花惹草，收攏後宮。【卡牌對戰ｘ戀愛劇情】以牌秘會一場，來一探究竟吧！",
+        "member_img":["/members/10/10 (1).webp",
+        "/members/10/10 (2).webp",
+        "/members/10/10 (3).webp",
+        "/members/10/10 (4).webp"],
+        "member_name":["謝鼎璿","游陽豪","江皓葳","吳育嫺"],
+        "member_job":["程式","2D美術","UI、文本","2D&3D美術"],
+        "link":"https://x.com/olympus_R"
+    },
+
+    "PROJECT11":{
+        "poster":"/posters/11_P.webp",
+        "title":"Beyond Being",
+        "concept":"9歲的艾琳娜因病長期臥床，無法自由玩耍，只能透過媽媽訴說年輕時在異域探險的故事，在腦海中描繪世界的模樣。那些奇幻冒險讓她嚮往不已，而這天，她滿懷好奇地問媽媽……",
+        "member_img":["/members/11/11 (1).webp",
+        "/members/11/11 (2).webp",
+        "/members/11/11 (3).webp",
+        "/members/11/11 (4).webp"],
+        "member_name":["蕭榕","韓舒茵","謝依恬","黃健潔"],
+        "member_job":["配樂音效,展場規劃,故事腳本,UI設計","3D&動畫美術","場景&動畫美術,故事腳本","互動體驗,程式整合"],
+        "link":"https://www.instagram.com/beyondbeing.official/"
+    },
+
+    "PROJECT12":{
+        "poster":"/posters/12_P.webp",
+        "title":"Soul Ship",
+        "concept":"「SOULSHIP」是款結合遊戲手把與手勢感測器的雙人合作遊戲。遊戲機制與故事、關卡主題緊密結合，帶來豐富多樣的遊戲體驗。玩家將操控熱狗和獨角獸，運用各自能力合作完成挑戰。",
+        "member_img":["/members/12/12 (1).webp",
+        "/members/12/12 (3).webp",
+        "/members/12/12 (2).webp"],
+        "member_name":["史卓嘉","張愷瑩","張瑜芝"],
+        "member_job":["企劃、程式","3D美術設計、2D美術","角色設計、2D美術、3D場景、周邊設計"],
+        "link":"https://www.instagram.com/soul._.ship/?utm_source=ig_web_button_share_sheet"
+    },
+
+    "PROJECT13":{
+        "poster":"/posters/13_P.webp",
+        "title":"深淵之眸",
+        "concept":"以梅杜莎的故事為原型，本是受害者的她卻無故受罰，心有不甘而踏上復仇之路。玩家將扮演梅杜莎，遭遇重重關卡與各式怪異敵人，必須運用特殊方法才能將其石化。",
+        "member_img":["/members/13/13 (1).webp",
+        "/members/13/13 (2).webp",
+        "/members/13/13 (3).webp",
+        "/members/13/13 (4).webp"],
+        "member_name":["賴伯全","魏羽晨","陳柏瑋","呂耘慈"],
+        "member_job":["美術、音樂 3D場景搭建","程式","程式","美術界面、3D角色建模"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT14":{
+        "poster":"/posters/14_P.webp",
+        "title":"旅途",
+        "concept":"白色鯨魚遺忘了自己，少年不知該不該活下去，失去女兒的父親在海上寄託思念。記憶如潮水退去，生命如鯨落般交錯重生。當過去與未來交織，他們能否找回真正的答案？",
+        "member_img":["/members/14/14 (1).webp",
+        "/members/14/14 (2).webp",
+        "/members/14/14 (3).webp"],
+        "member_name":["黃芷柔","謝茵萁","黃家育"],
+        "member_job":["美術","程式","3D,、動畫"],
+        "link":"https://www.instagram.com/trayecto_project/"
+    },
+
+    "PROJECT15":{
+        "poster":"/posters/15_P.webp",
+        "title":"泰樂工坊",
+        "concept":"「泰樂工坊」是一款2D裁縫模擬遊戲，玩家扮演裁縫師泰樂，透過縫紉完成委託並幫助遊戲世界中的角色。玩家需操控雙手手縫，透過任務過程學習基本手縫技巧。",
+        "member_img":["/members/15/15 (1).webp",
+        "/members/15/15 (2).webp",
+        "/members/15/15 (3).webp"],
+        "member_name":["徐筠儒","李佳怡","劉駱宇"],
+        "member_job":["美術","美術","程式、PM"],
+        "link":"https://www.instagram.com/_taylor_workshop_/"
+    },
+    
+    "PROJECT17":{
+        "poster":"/posters/17_P.webp",
+        "title":"海洋守護者",
+        "concept":"這款3D遊戲透過高度互動的遊戲體驗，讓玩家沉浸於保護海洋環境與瀕危海龜的世界。玩家將扮演一位海洋的守護者，在廣闊的海洋中探索，完成各種環保任務，並學習如何保護海洋生態系統。",
+        "member_img":["/members/17/17 (1).webp",
+        "/members/17/17 (2).webp",
+        "/members/17/17 (3).webp"],
+        "member_name":["鄧文南","楊氏碧銀","范氏瓊花"],
+        "member_job":["程式","UI","3D"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
+
+    "PROJECT18":{
+        "poster":"/posters/18_P.webp",
+        "title":"Emosphere",
+        "concept":"「Emosphere」是一款沉浸式互動裝置，呈現國際學生在臺灣的情感旅程。透過喜悅、悲傷、恐懼、厭惡與憤怒五種情緒，觀眾可體驗他們適應文化差異的內心掙扎，感受遠離家鄉的真實心境。",
+        "member_img":["/members/18/18 (1).webp",
+        "/members/18/18 (2).webp",
+        "/members/18/18 (3).webp",
+        "/members/18/18 (4).webp"],
+        "member_name":["Grant Liu","Vipatr Kuptasanti","Aw Ting Yu","Angelique Ancilla"],
+        "member_job":["程式設計","程式設計","美術設計","美術設計"],
+        "link":"https://www.instagram.com/ntut.ixd/"
     }
 }

@@ -29,7 +29,8 @@
     @apply text-black text-base tracking-tight;
   }
   .MemberTitle {
-    @apply text-Cus_Orange text-base font-black;
+    @apply text-Cus_Orange text-base;
+    -webkit-text-stroke: 0.5px currentColor;
   }
   .AdditionalText {
     @apply text-gray-500 text-sm;

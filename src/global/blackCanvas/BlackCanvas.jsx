@@ -173,7 +173,7 @@ export function ProjectsInfomation({ group }) {
   }, []);
 
   return (
-    <div className="h-full">
+    <div className="h-full animate-SlideDown">
       <div className={isMobile ? PAPER_DISPLAY[1] : PAPER_DISPLAY[0]}>
         <div
           className={`${
