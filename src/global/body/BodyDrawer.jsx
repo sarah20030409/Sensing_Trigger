@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef, useMemo } from "react";
 // import bodyDrawer from "@/assets/bodyImg/bodyDrawer.webp";
 import InsideDrawer from "./components/InsideDrawer";
 import { motion } from "motion/react";
@@ -13,20 +13,25 @@ const BodyDrawer = forwardRef((props, ref) => {
   const [lastRouter, setLastRouter] = useState(location.pathname); // Record the last router
   const CLOSE_TIME = 300;
   const OPEN_TIME = 1000 + CLOSE_TIME;
-  const DRAWER_ANIMATION = {
-    initial: { translateY: "-97%" },
-    animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
-    transition: { duration: 1, ease: [0.42, 0, 0.58, 1] },
-  };
+  const DRAWER_ANIMATION = useMemo(
+    () => ({
+      initial: { translateY: "-97%" },
+      animate: { translateY: isOpen ? -50 : "-97%" }, // true : false
+      transition: { duration: 1, ease: [0.4, 0.0, 0.2, 1] },
+    }),
+    [isOpen]
+  );
 
-  const DRAWER_STYLE = () => {
+  const DRAWER_STYLE = useMemo(() => {
     if (location.pathname == "/") return;
     // If home page , don't show drawer.
     return {
       backgroundImage: `url(${bodyDrawer})`,
       backgroundSize: "95% 100%",
+      willChange: "transform",
+      transform: "translateZ(0)",
     };
-  };
+  }, [location.pathname]);
 
   useEffect(() => {
     // If the last router is the same as the current router, don't do anything
@@ -58,7 +63,7 @@ const BodyDrawer = forwardRef((props, ref) => {
       <motion.div className=" FlexToCenter " {...DRAWER_ANIMATION}>
         <div
           className="bg-contain bg-no-repeat bg-center w-[100%]"
-          style={DRAWER_STYLE()}
+          style={DRAWER_STYLE}
         >
           <InsideDrawer />
         </div>
