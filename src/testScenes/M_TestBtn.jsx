@@ -142,3 +142,16 @@
 //     </div>
 //   );
 // }
+
+// useEffect(() => {
+//   if (lastRouter !== "/" && location.pathname !== "/") {
+//     setTimeout(() => {
+//       setIsOpen(false);
+//     }, CLOSE_TIME);
+//   }
+
+//   setLastRouter(location.pathname);
+//   setTimeout(() => {
+//     setIsOpen(true);
+//   }, OPEN_TIME);
+// }, [location.pathname]);
