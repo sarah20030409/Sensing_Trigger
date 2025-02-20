@@ -45,7 +45,7 @@ export function ResponsiveSlider() {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
-          vertical: true,
+          // vertical: true,
         },
       },
       {
@@ -53,7 +53,7 @@ export function ResponsiveSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          vertical: true,
+          // vertical: true,
         },
       },
     ],
