@@ -4,6 +4,7 @@ import AboutUs from "@/pages/aboutUs/AboutUs";
 import Product from "@/pages/aboutProducts/Product";
 import Projects from "@/pages/projects/Projects";
 import Sponsors from "@/pages/sponsors/Sponsors";
+import Home from "@/pages/home/Home";
 // import circleLabel from "@/assets/bodyImg/CircleLabel.svg";
 // import triangleLabel from "@/assets/bodyImg/TriangleLabel.svg";
 // import squareLabel from "@/assets/bodyImg/SquareLabel.svg";
@@ -21,7 +22,7 @@ export default function InsideDrawer({}) {
   const CLOSE_TIME = 500;
 
   const routes = useRoutes([
-    { path: "/", element: <></> },
+    { path: "/", element: <Home /> },
     { path: "/aboutUs", element: <AboutUs /> },
     { path: "/product", element: <Product /> },
     { path: "/projects", element: <Projects /> },

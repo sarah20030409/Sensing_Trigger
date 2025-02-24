@@ -10,7 +10,7 @@ const bodyDrawer = "/assets/bodyImg/bodyDrawer.webp";
 const BodyDrawer = forwardRef((props, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const [lastRouter, setLastRouter] = useState(location.pathname); // Record the last router
+  // const [lastRouter, setLastRouter] = useState(location.pathname); // Record the last router
   const CLOSE_TIME = 300;
   const OPEN_TIME = 1000 + CLOSE_TIME;
   const DRAWER_ANIMATION = useMemo(
@@ -23,8 +23,9 @@ const BodyDrawer = forwardRef((props, ref) => {
   );
 
   const DRAWER_STYLE = useMemo(() => {
-    if (location.pathname == "/") return;
+    // if (location.pathname == "/") return;
     // If home page , don't show drawer.
+
     return {
       backgroundImage: `url(${bodyDrawer})`,
       backgroundSize: "95% 100%",
@@ -34,28 +35,12 @@ const BodyDrawer = forwardRef((props, ref) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    // If the last router is the same as the current router, don't do anything
-    if (lastRouter === location.pathname) {
-      setLastRouter(location.pathname);
-      return;
-    }
-
-    // If not "/" ,can do close animation
-    if (lastRouter !== "/" && location.pathname !== "/") {
+    setTimeout(() => {
       setIsOpen(false);
-    }
-
-    setLastRouter(location.pathname);
-
-    // Open the drawer
-    const timer = setTimeout(
-      () => {
-        setIsOpen(true);
-      },
-      location.pathname !== "/" ? OPEN_TIME : 0
-    );
-
-    return () => clearTimeout(timer);
+    }, CLOSE_TIME);
+    setTimeout(() => {
+      setIsOpen(true);
+    }, OPEN_TIME);
   }, [location.pathname]);
 
   return (

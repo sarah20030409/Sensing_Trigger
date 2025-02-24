@@ -155,3 +155,28 @@
 //     setIsOpen(true);
 //   }, OPEN_TIME);
 // }, [location.pathname]);
+
+// useEffect(() => {
+//     // If the last router is the same as the current router, don't do anything
+//     if (lastRouter === location.pathname) {
+//       setLastRouter(location.pathname);
+//       return;
+//     }
+
+//     // If not "/" ,can do close animation
+//     if (lastRouter !== "/" && location.pathname !== "/") {
+//       setIsOpen(false);
+//     }
+
+//     setLastRouter(location.pathname);
+
+//     // Open the drawer
+//     const timer = setTimeout(
+//       () => {
+//         setIsOpen(true);
+//       },
+//       location.pathname !== "/" ? OPEN_TIME : 0
+//     );
+
+//     return () => clearTimeout(timer);
+//   }, [location.pathname]);
