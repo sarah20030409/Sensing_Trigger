@@ -54,7 +54,7 @@
     },
 
     "PROJECT05":{
-        "poster":"/assets/projectImg/Posters/P01.webp",
+        "poster":"/posters/05_P.webp",
         "title":"Ｂｅｌｌｙ",
         "concept":"一場在魚身體裡的奇幻冒險，在這個充滿驚奇的奇異世界中穿梭探索，同時尋找逃出的方式。",
         "member_img":["/members/05/05 (1).webp",
@@ -65,7 +65,7 @@
     },
 
     "PROJECT06":{
-        "poster":"/assets/projectImg/Posters/P01.webp",
+        "poster":"/posters/06_P.webp",
         "title":"心蓮心",
         "concept":"「心蓮心」是一款給年長族群的 LINE 官方帳號，提供 AI 生圖、模板和簡潔介面，使用者能輕鬆編輯，生成客製化長輩圖。「長輩圖」創造了年長者與子代的共同語言，達成聯繫情感的目的。",
         "member_img":["/members/06/06 (1).webp",
