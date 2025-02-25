@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useFrame, Canvas } from "@react-three/fiber";
-import { M_AllProduct } from "@/components/models/AllProdu/M_ALLproduct_base_HighColor";
+import { M_AllProduct } from "@/components/models/AllProdu/M_AllProduct";
 import { M_CircleBTN } from "@/components/models/SingleButton/CircleBTN_HighColor";
 import { M_TriangleBTN } from "@/components/models/SingleButton/TriangleBTN_HighColor";
 import { M_SquareBTN } from "@/components/models/SingleButton/SquareBTN_HighColor";
