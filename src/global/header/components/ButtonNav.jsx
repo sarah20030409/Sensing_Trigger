@@ -43,13 +43,13 @@ export function ButtonRotation() {
     enablePan: false,
     maxPolarAngle: Math.PI / 2,
     minPolarAngle: Math.PI / 2,
-    minAzimuthAngle: -Math.PI / 3,
-    maxAzimuthAngle: Math.PI / 3,
+    minAzimuthAngle: -Math.PI / 5,
+    maxAzimuthAngle: Math.PI / 5,
   };
   return (
     <Canvas>
       {isDesktop && <OrbitControls {...ORBIT_OPTIONS} />}
-      <group>
+      <group scale={1.2}>
         <M_AllProduct />
         <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
         <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />

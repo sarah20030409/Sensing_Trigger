@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const updateBackgroundImage = () => {
-      if (window.innerWidth <= 590) {
+      if (window.innerWidth <= 1024) {
         setBackgroundImage(ST_Poster01);
         setIsMobile(true);
       } else {
@@ -25,9 +25,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-full FlexToCenter items-center">
+    <div className="h-full FlexToCenter items-center animate-smallBounce2">
       <img
-        className="w-[75%] mx-auto rotate-3 border border-Cus_Blue"
+        className="w-[70%] mx-auto rotate-3 border border-Cus_Blue 
+        max-m_md:w-[85%] max-md:w-[73%] max-Spec_RWD01:w-[80%]"
         src={backgroundImage}
       />
     </div>

@@ -5,6 +5,7 @@ Command: npx gltfjsx@6.5.3 public/models/AllProduct/ALLproduct_base_HighColor.gl
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 export function M_AllProduct(props) {
   const { nodes, materials } = useGLTF(
@@ -68,19 +69,17 @@ export function M_AllProduct(props) {
           scale={[1.065, 0.939, 1.065]}
         />
       </mesh>
-      <group rotation={[Math.PI / 2, 0, 0]}>
-        <mesh
-          geometry={nodes.背板_工作區域_1007.geometry}
-          material={materials.背板_test}
-          position={[1, 0, 0]}
-        ></mesh>
-
-        {/* ↓ 背面材質 ↓ */}
-        <mesh
-          geometry={nodes.背板_工作區域_1007_1.geometry}
-          material={materials.Material}
-        />
-      </group>
+      <mesh
+        geometry={nodes.背板_工作區域_1002.geometry}
+        rotation={[Math.PI / 2, 0, 0]}
+        material={
+          new THREE.MeshStandardMaterial({
+            color: 0xffffff,
+            emissive: 0xffffff,
+            emissiveIntensity: 4,
+          })
+        }
+      />
       <mesh
         geometry={nodes.背板_工作區域_1003.geometry}
         material={materials["背板_工作區域 1.002"]}
