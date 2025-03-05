@@ -7,19 +7,12 @@ import React from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
-export function M_AllProduct(props) {
+export function M_AllProduct01(props) {
   const { nodes, materials } = useGLTF(
     "/models/AllProduct/ALLproduct_base_HighColor.glb"
   );
   return (
     <group {...props} dispose={null}>
-      <mesh
-        geometry={nodes.背板字.geometry}
-        material={materials.背板字}
-        rotation={[Math.PI / 2, 0, 0]}
-        position={[0, 0, 0.05]}
-        scale={4.8}
-      />
       <mesh
         geometry={nodes.Cube001.geometry}
         material={materials.bake_circle_base}
@@ -78,6 +71,7 @@ export function M_AllProduct(props) {
       </mesh>
       <mesh
         geometry={nodes.背板_工作區域_1002.geometry}
+        rotation={[Math.PI / 2, 0, 0]}
         material={
           new THREE.MeshStandardMaterial({
             color: 0xffffff,
@@ -85,7 +79,6 @@ export function M_AllProduct(props) {
             emissiveIntensity: 4,
           })
         }
-        rotation={[Math.PI / 2, 0, 0]}
       />
       <mesh
         geometry={nodes.背板_工作區域_1003.geometry}

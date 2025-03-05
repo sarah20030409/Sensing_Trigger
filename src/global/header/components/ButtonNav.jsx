@@ -23,11 +23,14 @@ export default function ButtonNav() {
 
 export function ButtonRotation() {
   const [isDesktop, setIsDesktop] = useState(true);
+  const [scale, setScale] = useState(1.35);
+
   useEffect(() => {
     const checkDevice = () => {
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
       setIsDesktop(!isTouchDevice);
+      setScale(!isTouchDevice ? 1.35 : 1.0);
     };
 
     checkDevice();
@@ -43,13 +46,14 @@ export function ButtonRotation() {
     enablePan: false,
     maxPolarAngle: Math.PI / 2,
     minPolarAngle: Math.PI / 2,
-    minAzimuthAngle: -Math.PI / 5,
-    maxAzimuthAngle: Math.PI / 5,
+    minAzimuthAngle: -Math.PI / 13,
+    maxAzimuthAngle: Math.PI / 13,
   };
   return (
     <Canvas>
       {isDesktop && <OrbitControls {...ORBIT_OPTIONS} />}
-      <group scale={1.2}>
+      <ambientLight intensity={2} />
+      <group scale={scale}>
         <M_AllProduct />
         <SingleButton singleComp="CircleBTN" NAV_PATH="/aboutUs" />
         <SingleButton singleComp="TriangleBTN" NAV_PATH="/product" />

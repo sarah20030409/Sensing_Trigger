@@ -26,9 +26,10 @@ export default function HeaderDesktop() {
   return (
     // Desk padding
     <div
-      className="bg-cover bg-no-repeat bg-center px-[2%] py-[2%] mx-[1.5%] rounded-2xl max-md:rounded-xl"
+      className="bg-cover bg-no-repeat bg-center px-[2%] py-[3%] mx-[1.5%] rounded-2xl max-md:rounded-xl"
       style={TABLE_IMG}
     >
+      {/* <TopNavList /> */}
       <div className=" h-svh relative">
         <div className="w-full absolute px-[5%] z-30 max-m_md:pt-[4%]">
           <div className="flex justify-between">
@@ -169,6 +170,16 @@ export function InfoDataBar() {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+export function TopNavList() {
+  return (
+    <div className="bg-white h-11 w-full fixed top-0 left-0 z-50 opacity-75">
+      <ul>
+        <li></li>
+      </ul>
     </div>
   );
 }
