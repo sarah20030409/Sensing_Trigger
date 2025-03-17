@@ -42,7 +42,7 @@ export default function HeaderDesktop() {
             </a>
             <a
               className="flex justify-end"
-              href="https://www.facebook.com/NTUT110IXD/"
+              href="https://www.instagram.com/reel/DHA-my9zjlJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
               target="_blank"
             >
               <img
@@ -58,7 +58,7 @@ export default function HeaderDesktop() {
           <ToolGroupLeft />
         </div>
 
-        <div className="FlexToCenter HeaderDeskDisplay z-20 ">
+        <div className="FlexToCenter HeaderDeskDisplay z-20 -mt-9 max-Spec_RWD03:mt-0">
           <ButtonNav />
         </div>
 
@@ -69,7 +69,7 @@ export default function HeaderDesktop() {
           <InfoDataBar />
         </div>
       </div>
-      <p className="text-center HintText text-Cus_Blue ml-8 -translate-y-14 animate-pulse max-md:ml-4">
+      <p className="text-center HintText text-Cus_Blue ml-8 -translate-y-20 max-Spec_RWD03:-translate-y-14 animate-pulse max-md:ml-4">
         ↑觸發任一按鈕瀏覽頁面↑
       </p>
       <div className="hidden max-md:block">
