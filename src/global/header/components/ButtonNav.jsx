@@ -30,7 +30,7 @@ export function ButtonRotation() {
       const isTouchDevice =
         "ontouchstart" in window || navigator.maxTouchPoints > 0;
       setIsDesktop(!isTouchDevice);
-      setScale(!isTouchDevice ? 1.35 : 1.0);
+      setScale(!isTouchDevice ? 1.25 : 1.0);
     };
 
     checkDevice();
