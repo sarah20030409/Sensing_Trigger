@@ -49,7 +49,7 @@ export default function HeaderDesktop() {
   return (
     // Desk padding
     <div
-      className="bg-cover bg-no-repeat bg-center px-[2%] py-[3%] mx-[1.5%] rounded-2xl max-md:rounded-xl"
+      className="bg-cover bg-no-repeat bg-center px-[2%] py-[4%] mx-[1.5%] rounded-2xl max-md:rounded-xl max-Spec_RWD01:pt-[6%]"
       style={TABLE_IMG}
     >
       {isMobile ? <TopNavListMobile /> : <TopNavListDesktop />}
@@ -209,7 +209,7 @@ export function TopNavListDesktop() {
   };
 
   return (
-    <div className="FlexToCenter items-center bg-white h-14 w-full fixed top-0 left-0 z-50 bg-opacity-75">
+    <div className="FlexToCenter items-center bg-white h-12 w-full fixed top-0 left-0 z-50 bg-opacity-75">
       <ul className="flex justify-around w-full px-[15%] max-Spec_RWD03:px-[7%]">
         {navSvg.map((navsvg, index) => (
           <li
@@ -256,12 +256,12 @@ export function TopNavListMobile() {
   };
 
   return (
-    <div className=" bg-white h-14 w-full fixed top-0 left-0 z-50 bg-opacity-75">
+    <div className=" bg-white h-11 w-full fixed top-0 left-0 z-50 bg-opacity-75">
       <div
         className="flex justify-end items-center h-full pr-[8%] cursor-pointer hover:opacity-50"
         onClick={handleBurger}
       >
-        <img className="w-[4%] max-Spec_RWD01:w-[5%]" src={burgerNav} />
+        <img className="w-[3%] max-Spec_RWD01:w-[5%]" src={burgerNav} />
       </div>
       {isBurgerOpen ? (
         <div className="bg-white w-full bg-opacity-75 FlexToCenter animate-NavSclale">
