@@ -261,7 +261,7 @@ export function TopNavListMobile() {
         className="flex justify-end items-center h-full pr-[8%] cursor-pointer hover:opacity-50"
         onClick={handleBurger}
       >
-        <img src={burgerNav} />
+        <img className="w-[4%]" src={burgerNav} />
       </div>
       {isBurgerOpen ? (
         <div className="bg-white w-full bg-opacity-75 FlexToCenter ">
