@@ -105,6 +105,10 @@ export default {
           "0%": { transform: "translateY(-5%)", opacity: "0.4" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        NavSclale: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         fadeInOut: "fadeInOut 2s ease-in-out infinite",
@@ -120,6 +124,7 @@ export default {
         SlideUp: "SlideUp 0.4s forwards",
         SlideDown: "SlideDown 0.4s forwards",
         NavDown: "NavDown 1s forwards",
+        NavSclale: "NavSclale 0.8s forwards",
       },
     },
   },

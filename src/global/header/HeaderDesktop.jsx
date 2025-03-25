@@ -261,10 +261,10 @@ export function TopNavListMobile() {
         className="flex justify-end items-center h-full pr-[8%] cursor-pointer hover:opacity-50"
         onClick={handleBurger}
       >
-        <img className="w-[4%]" src={burgerNav} />
+        <img className="w-[4%] max-Spec_RWD01:w-[5%]" src={burgerNav} />
       </div>
       {isBurgerOpen ? (
-        <div className="bg-white w-full bg-opacity-75 FlexToCenter ">
+        <div className="bg-white w-full bg-opacity-75 FlexToCenter animate-NavSclale">
           <ul className="py-3 animate-NavDown">
             {navSvg.map((navsvg, index) => (
               <li
