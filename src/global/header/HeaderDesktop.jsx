@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ButtonNav from "./components/ButtonNav";
 // import headerTable from "@/assets/headerImg/headerTable.webp";
 // import ToolScrewdriver01 from "@/assets/headerImg/ToolScrewdriver01.webp";
@@ -19,9 +20,31 @@ const APRimg = "/assets/headerImg/APR.webp";
 const MAYimg = "/assets/headerImg/MAY.webp";
 const Logo01 = "/LogoFav.svg";
 const Logo02 = "/SensingTriggerOrange.svg";
+const circleLabel = "/assets/bodyImg/CircleLabel.svg";
+const triangleLabel = "/assets/bodyImg/TriangleLabel.svg";
+const squareLabel = "/assets/bodyImg/SquareLabel.svg";
+const pentagonLabel = "/assets/bodyImg/PentagonLabel.svg";
+const burgerNav = "/assets/burgerNav.svg";
 
 export default function HeaderDesktop() {
   const TABLE_IMG = { backgroundImage: `url(${headerTable})` };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 790) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    updateBackgroundImage();
+    window.addEventListener("resize", updateBackgroundImage);
+
+    return () => {
+      window.removeEventListener("resize", updateBackgroundImage);
+    };
+  }, []);
 
   return (
     // Desk padding
@@ -29,7 +52,8 @@ export default function HeaderDesktop() {
       className="bg-cover bg-no-repeat bg-center px-[2%] py-[3%] mx-[1.5%] rounded-2xl max-md:rounded-xl"
       style={TABLE_IMG}
     >
-      {/* <TopNavList /> */}
+      {isMobile ? <TopNavListMobile /> : <TopNavListDesktop />}
+      {/* <TopNavListDesktop /> */}
       <div className=" h-svh relative">
         <div className="w-full absolute px-[5%] z-30 max-m_md:pt-[4%]">
           <div className="flex justify-between">
@@ -151,7 +175,7 @@ export function InfoDataBar() {
           "2025北科大互動設計系放視大賞：數位互動設計展，地點：高雄展覽館",
         ];
         const InfoStartDate = ["18", "09", "15"];
-        const InfoEndDate = ["22", "12", "17"];
+        const InfoEndDate = ["21", "12", "17"];
         const InfoImg = [APRimg, MAYimg, MAYimg];
         return (
           <div
@@ -174,12 +198,99 @@ export function InfoDataBar() {
   );
 }
 
-export function TopNavList() {
+export function TopNavListDesktop() {
+  const navigate = useNavigate();
+  const navSvg = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
+  const navTitle = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
+  const navPath = ["/aboutUs", "/product", "/projects", "/sponsors"];
+
+  const handleClick = (NAV_PATH) => {
+    navigate(NAV_PATH);
+  };
+
   return (
-    <div className="bg-white h-11 w-full fixed top-0 left-0 z-50 opacity-75">
-      <ul>
-        <li></li>
+    <div className="FlexToCenter items-center bg-white h-14 w-full fixed top-0 left-0 z-50 bg-opacity-75">
+      <ul className="flex justify-around w-full px-[15%] max-Spec_RWD03:px-[7%]">
+        {navSvg.map((navsvg, index) => (
+          <li
+            key={index}
+            className={`flex items-center cursor-pointer 
+            ${
+              location.pathname === navPath[index]
+                ? "opacity-35"
+                : "hover:opacity-50"
+            }`}
+            onClick={() => handleClick(navPath[index])}
+          >
+            <img
+              className="w-[18%]"
+              src={navsvg}
+              alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
+            />
+            <p className="NavTitle ml-3">{navTitle[index]}</p>
+          </li>
+        ))}
       </ul>
+    </div>
+  );
+}
+
+export function TopNavListMobile() {
+  const navigate = useNavigate();
+  const navSvg = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
+  const navTitle = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
+  const navPath = ["/aboutUs", "/product", "/projects", "/sponsors"];
+
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  const handleClick = (NAV_PATH) => {
+    navigate(NAV_PATH);
+  };
+
+  const handleBurger = () => {
+    if (isBurgerOpen) {
+      setIsBurgerOpen(false);
+    } else {
+      setIsBurgerOpen(true);
+    }
+  };
+
+  return (
+    <div className=" bg-white h-14 w-full fixed top-0 left-0 z-50 bg-opacity-75">
+      <div
+        className="flex justify-end items-center h-full pr-[8%] cursor-pointer hover:opacity-50"
+        onClick={handleBurger}
+      >
+        <img src={burgerNav} />
+      </div>
+      {isBurgerOpen ? (
+        <div className="bg-white w-full bg-opacity-75 FlexToCenter ">
+          <ul className="py-3 animate-NavDown">
+            {navSvg.map((navsvg, index) => (
+              <li
+                key={index}
+                className={`flex items-center cursor-pointer my-6
+              ${
+                location.pathname === navPath[index]
+                  ? "opacity-35"
+                  : "hover:opacity-50"
+              }`}
+                onClick={() => {
+                  handleClick(navPath[index]);
+                  handleBurger();
+                }}
+              >
+                <img
+                  className="w-[18%]"
+                  src={navsvg}
+                  alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
+                />
+                <p className="NavTitle ml-3">{navTitle[index]}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -12,6 +12,14 @@
     @apply text-Cus_Blue text-2xl font-normal tracking-[5px] text-center pr-1 [writing-mode:vertical-rl] max-md:text-lg max-md:pr-0;
     -webkit-text-stroke: 0.4px currentColor;
   }
+  .NavTitle {
+    @apply text-Cus_Blue text-xl font-normal tracking-[5px] pr-1 max-sm:text-lg max-md:pr-0;
+    -webkit-text-stroke: 0.4px currentColor;
+  }
+  .LoadingTitle {
+    @apply text-Cus_Blue text-2xl font-light tracking-[3px] text-center pl-2 max-md:text-lg max-md:pr-0;
+    /* -webkit-text-stroke: 0.4px currentColor; */
+  }
   .HintText {
     @apply text-xl tracking-[15px] max-md:text-lg max-md:tracking-[8px];
   }
