@@ -20,9 +20,9 @@ const APRimg = "/assets/headerImg/APR.webp";
 const MAYimg = "/assets/headerImg/MAY.webp";
 const Logo01 = "/LogoFav.svg";
 const Logo02 = "/SensingTriggerOrange.svg";
-const circleLabel = "/assets/bodyImg/CircleLabel.svg";
+const circleLabel = "/assets/bodyImg/O_CircleLabel.svg"; //CircleLabel.svg
 const triangleLabel = "/assets/bodyImg/TriangleLabel.svg";
-const squareLabel = "/assets/bodyImg/SquareLabel.svg";
+const squareLabel = "/assets/bodyImg/O_SquareLabel.svg"; //SquareLabel.svg
 const pentagonLabel = "/assets/bodyImg/PentagonLabel.svg";
 const burgerNav = "/assets/burgerNav.svg";
 
@@ -203,6 +203,12 @@ export function TopNavListDesktop() {
   const navSvg = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
   const navTitle = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
   const navPath = ["/aboutUs", "/product", "/projects", "/sponsors"];
+  const navStyle = [
+    "NavTitle text-Cus_Orange",
+    "NavTitle ",
+    "NavTitle text-Cus_Orange",
+    "NavTitle ",
+  ];
 
   const handleClick = (NAV_PATH) => {
     navigate(NAV_PATH);
@@ -227,7 +233,7 @@ export function TopNavListDesktop() {
               src={navsvg}
               alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
             />
-            <p className="NavTitle ml-3">{navTitle[index]}</p>
+            <p className={`ml-3 ${navStyle[index]}`}>{navTitle[index]}</p>
           </li>
         ))}
       </ul>
@@ -240,6 +246,12 @@ export function TopNavListMobile() {
   const navSvg = [circleLabel, triangleLabel, squareLabel, pentagonLabel];
   const navTitle = ["關於我們", "產品介紹", "專案部門", "企業贊助"];
   const navPath = ["/aboutUs", "/product", "/projects", "/sponsors"];
+  const navStyle = [
+    "NavTitle text-Cus_Orange",
+    "NavTitle ",
+    "NavTitle text-Cus_Orange",
+    "NavTitle ",
+  ];
 
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
@@ -285,7 +297,7 @@ export function TopNavListMobile() {
                   src={navsvg}
                   alt="2025國立臺北科技大學互動設計系：展覽的理念，感受觸發股份有限公司"
                 />
-                <p className="NavTitle ml-3">{navTitle[index]}</p>
+                <p className={`ml-3 ${navStyle[index]}`}>{navTitle[index]}</p>
               </li>
             ))}
           </ul>
