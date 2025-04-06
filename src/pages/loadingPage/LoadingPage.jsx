@@ -9,7 +9,7 @@ export default function LoadingPage() {
   return (
     <div>
       <div
-        className="w-full h-svh flex justify-center items-center bg-cover bg-no-repeat bg-center"
+        className="w-full h-svh flex justify-center items-center bg-cover bg-no-repeat bg-center "
         style={TABLE_IMG}
       >
         <div className="w-full">
