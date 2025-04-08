@@ -1,13 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
-// import conceptCard from "@/assets/aboutUsImg/conceptCard.webp";
-// import conceptCardPhone from "@/assets/aboutUsImg/conceptCardPhone.webp";
-// import conceptImage from "@/assets/aboutUsImg/conceptImage.webp";
-// import maskingTape from "@/assets/projectImg/maskingTape.webp";
 import { CustomContext } from "../CustomContext";
+import sponsorContents from "@/pages/sponsors/sponsorContents.json";
 import projectContents from "@/pages/projects/projectContents.json";
 //這裡的Context作用是"取值"
 
 const conceptCard = "/assets/aboutUsImg/conceptCard.webp";
+const sponsorCard_D = "/assets/sponsorsImg/sponsorCard_D.webp";
+const sponsorCard_M = "/assets/sponsorsImg/sponsorCard_M.webp";
 const conceptCardPhone = "/assets/aboutUsImg/conceptCardPhone.webp";
 const conceptImage = "/assets/aboutUsImg/conceptImage.webp";
 const maskingTape = "/assets/projectImg/maskingTape.webp";
@@ -229,13 +228,42 @@ export function ProjectsInfomation({ group }) {
 }
 
 export function SponsorsInfomation({ sponsorNum }) {
+  const CONTENT = sponsorContents["SPONSOR" + sponsorNum];
   const SPONSOR_LOGO = [];
   const SPONSOR_NAME = [];
   const SPONSOR_CONCEPT = [];
+  const [backgroundImage, setBackgroundImage] = useState("");
+
+  // For >= 790 device.
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 790) {
+        setBackgroundImage(`url(${sponsorCard_M})`);
+      } else {
+        setBackgroundImage(`url(${sponsorCard_D})`);
+      }
+    };
+    updateBackgroundImage();
+    window.addEventListener("resize", updateBackgroundImage);
+
+    return () => {
+      window.removeEventListener("resize", updateBackgroundImage);
+    };
+  }, []);
 
   return (
-    <div>
-      <h1>SponsorsInfomation{sponsorNum}</h1>
+    <div className="h-full FlexToCenter items-center animate-SlideDown">
+      <div
+        className="h-[450px] w-[760px] bg-contain bg-center bg-no-repeat scale-110
+        max-lg:scale-100 max-Spec_RWD03:scale-95
+        max-md:scale-95 max-md:h-[700px] max-md:w-[480px] 
+        max-Spec_RWD01:scale-[75%] max-Spec_RWD02:scale-[65%]"
+        style={{ backgroundImage: backgroundImage }}
+      >
+        <div className="">
+          <h1>SponsorsInfomation{sponsorNum}</h1>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-// import closeLetter from "@/assets/sponsorsImg/closeLetter.webp";
-// import openLetter01 from "@/assets/sponsorsImg/openLetter01.webp";
-// import openLetter02 from "@/assets/sponsorsImg/openLetter02.webp";
-// import sealingWax from "@/assets/sponsorsImg/SealingWax.webp";
-// import sponsorPaper from "@/assets/sponsorsImg/sponsorPaper.webp";
-// import tape01 from "@/assets/sponsorsImg/sponsorTape01.webp";
-// import tape02 from "@/assets/sponsorsImg/sponsorTape02.webp";
-// import testLogo from "@/assets/sponsorsImg/sponsorTest.webp";
+import sponsorContents from "@/pages/sponsors/sponsorContents.json";
 import { CustomContext } from "@/global/CustomContext";
 //這裡的Context作用是"賦值"
 
@@ -147,8 +140,10 @@ export function OpenLetter({ onOpen, isOpen }) {
 }
 
 export function SponsorPaper() {
+  const CONTENT = sponsorContents["SPONSOR"];
   const { setCurrentComponent, setSponsorIndex } = useContext(CustomContext);
-  const SPONSOR_LOGO = Array(20).fill(testLogo);
+
+  const SPONSOR_LOGO = Array(10).fill(testLogo);
   const handleClick = (index) => {
     setCurrentComponent("sponsors");
     setSponsorIndex(index);
@@ -160,19 +155,22 @@ export function SponsorPaper() {
         className="h-full bg-no-repeat bg-cover bg-bottom"
         style={{ backgroundImage: `url(${sponsorPaper})` }}
       >
-        <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
+        <p className="LoadingTitle font-normal text-[35px] pt-[20%] max-m_md:pt-[45%] max-Spec_RWD01:pt-[50%] max-Spec_RWD01:text-[50px]">
+          敬請期待
+        </p>
+        {/* <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
           {SPONSOR_LOGO.map((src, index) => (
-            <div className="m-[1.2%]">
+            <div className="m-[1.5%]">
               <img
                 key={index}
-                className="h-[87px] w-[87px] cursor-pointer hover:scale-105 
-                max-Spec_RWD05:w-[95px] max-Spec_RWD05:h-[95px] max-md:w-[100px] max-md:h-[100px] max-md:m-[2%]"
+                className="h-[110px] w-[110px] cursor-pointer hover:scale-105 
+                max-Spec_RWD05:w-[110px] max-Spec_RWD05:h-[110px] max-md:w-[130px] max-md:h-[130px] max-md:m-[5%]"
                 src={src}
-                onClick={() => handleClick(index)}
+                onClick={() => handleClick("0" + index)}
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
