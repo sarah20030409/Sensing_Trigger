@@ -155,7 +155,7 @@ export function SponsorPaper() {
         className="h-full bg-no-repeat bg-cover bg-bottom"
         style={{ backgroundImage: `url(${sponsorPaper})` }}
       >
-        <p className="LoadingTitle font-normal text-[35px] pt-[20%] max-m_md:pt-[45%] max-Spec_RWD01:pt-[50%] max-Spec_RWD01:text-[50px]">
+        <p className="LoadingTitle font-normal text-[35px] pt-[30%] max-m_md:pt-[45%] max-Spec_RWD01:pt-[50%] max-Spec_RWD01:text-[50px]">
           敬請期待
         </p>
         {/* <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
