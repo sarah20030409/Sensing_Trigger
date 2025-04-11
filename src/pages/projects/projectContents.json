@@ -178,6 +178,20 @@
         "member_job":["美術","美術","程式、PM"],
         "link":"https://www.instagram.com/_tailor_workshop_/"
     },
+    "PROJECT16":{
+        "poster":"/posters/16_P.webp",
+        "title":"感受觸發",
+        "concept":"一間致力於設計充滿創意與情感的「按鈕」公司互動設計作品的誕生，都是為了觸發使用者的感受「喀」的瞬間，按下的是各種形形色色的感受體驗。",
+        "member_img":[
+            "/members/16/16 (3).webp","/members/16/16 (1).webp",
+            "/members/16/16 (2).webp",
+            "/members/02/02 (2).webp",
+        "/members/03/03 (6).webp",
+        "/members/03/03 (4).webp"],
+        "member_name":["黃薐羽","黃楚媗","陳俞臻","張愛翎","俞卉嬨","葉思佑"],
+        "member_job":["總召","副召","公關組","視創組","虛擬展場組","實體展場組"],
+        "link":"https://www.instagram.com/ntut.ixd/"
+    },
     
     "PROJECT17":{
         "poster":"/posters/17_P.webp",

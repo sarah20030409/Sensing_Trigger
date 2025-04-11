@@ -76,6 +76,7 @@ export function ResponsiveSlider() {
         <SingleProject Group={"13"} />
         <SingleProject Group={"14"} />
         <SingleProject Group={"15"} />
+        <SingleProject Group={"16"} />
         <SingleProject Group={"17"} />
         <SingleProject Group={"18"} />
       </Slider>
