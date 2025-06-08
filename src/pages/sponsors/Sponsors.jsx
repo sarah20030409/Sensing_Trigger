@@ -11,6 +11,7 @@ const sponsorPaper = "/assets/sponsorsImg/sponsorPaper.webp";
 const tape01 = "/assets/sponsorsImg/sponsorTape01.webp";
 const tape02 = "/assets/sponsorsImg/sponsorTape02.webp";
 const testLogo = "/assets/sponsorsImg/sponsorTest.webp";
+const KP_Logo = "/assets/sponsorsImg/KP_logo.webp";
 
 export default function Sponsors() {
   const [openLetter, setOpenLetter] = useState(false);
@@ -143,7 +144,8 @@ export function SponsorPaper() {
   const CONTENT = sponsorContents["SPONSOR"];
   const { setCurrentComponent, setSponsorIndex } = useContext(CustomContext);
 
-  const SPONSOR_LOGO = Array(10).fill(testLogo);
+  const SPONSOR_LOGO = [KP_Logo];
+
   const handleClick = (index) => {
     setCurrentComponent("sponsors");
     setSponsorIndex(index);
@@ -155,10 +157,10 @@ export function SponsorPaper() {
         className="h-full bg-no-repeat bg-cover bg-bottom"
         style={{ backgroundImage: `url(${sponsorPaper})` }}
       >
-        <p className="LoadingTitle font-normal text-[35px] pt-[30%] max-m_md:pt-[45%] max-Spec_RWD01:pt-[50%] max-Spec_RWD01:text-[50px]">
+        {/* <p className="LoadingTitle font-normal text-[35px] pt-[30%] max-m_md:pt-[45%] max-Spec_RWD01:pt-[50%] max-Spec_RWD01:text-[50px]">
           敬請期待
-        </p>
-        {/* <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
+        </p> */}
+        <div className="h-full FlexToCenter flex-wrap overflow-y-scroll mx-[2%] px-[2%] pl-[5%] pt-[10%] pb-[45%] ScrollBarStyle">
           {SPONSOR_LOGO.map((src, index) => (
             <div className="m-[1.5%]">
               <img
@@ -166,11 +168,11 @@ export function SponsorPaper() {
                 className="h-[110px] w-[110px] cursor-pointer hover:scale-105 
                 max-Spec_RWD05:w-[110px] max-Spec_RWD05:h-[110px] max-md:w-[130px] max-md:h-[130px] max-md:m-[5%]"
                 src={src}
-                onClick={() => handleClick("0" + index)}
+                // onClick={() => handleClick("0" + index)}
               />
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );
